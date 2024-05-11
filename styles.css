@@ -44,17 +44,21 @@ body {
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    color: #333; /* Ensure text color stays the same */
 }
 
 .item img {
-    width: 60px; /* Adjust size as needed */
+    width: 120px; /* Adjust image size */
     height: auto;
-    margin-right: 10px;
+    margin-right: 20px;
     border-radius: 5px;
 }
 
 .item span {
-    font-size: 16px;
+    font-size: 24px; /* Adjust text size */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
 
 /* Right Section (Incoming Exams) */
@@ -79,4 +83,16 @@ body {
     margin-bottom: 10px;
     font-size: 16px;
     color: #333;
+}
+.exam-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.exam-day,
+.exam-date,
+.remaining-time {
+    font-size: 16px;
+    color: #666;
 }
