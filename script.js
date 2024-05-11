@@ -1,42 +1,63 @@
-// Function to fetch exam data from CSV
-async function fetchExamData() {
-    try {
-        const response = await fetch('QuickPDF/exams.csv');
-        const data = await response.text();
-        const rows = data.split('\n').slice(1); // Skip header row
-        const exams = rows.map(row => {
-            const columns = row.split(',');
-            return {
-                name: columns[0].trim(),
-                time: new Date(columns[1].trim()),
-            };
-        });
-        return exams;
-    } catch (error) {
-        console.error('Error fetching exam data:', error);
-        return [];
-    }
-}
+// Function to update the time left for each exam
+function updateExamsTime() {
+    var exams = [
+        { name: "MM CT1", time: new Date("2024-05-12T13:00:00") }, // Example exam data
+        { name: "MID start", time: new Date("2024-06-08T10:30:00") },
+        { name: "DSML Lab perf", time: new Date("2024-05-13T08:30:00") },
+        { name: "MLD CT1", time: new Date("2024-05-15T10:00:00") },
+        { name: "BIO CT1", time: new Date("2024-05-19T08:30:00") }
+    ];
 
-// Function to convert current exam data into CSV format
-function convertToCSV(exams) {
-    let csv = 'Name,Time\n'; // Header row
-    exams.forEach(exam => {
-        const formattedTime = `${exam.time.getFullYear()}-${(exam.time.getMonth() + 1).toString().padStart(2, '0')}-${exam.time.getDate().toString().padStart(2, '0')} ${exam.time.getHours().toString().padStart(2, '0')}:${exam.time.getMinutes().toString().padStart(2, '0')}`;
-        csv += `${exam.name},${formattedTime}\n`;
+    // Sort exams based on start time
+    exams.sort(function(a, b) {
+        return a.time - b.time;
     });
-    return csv;
+
+    var examsList = document.getElementById("incomingExams");
+    examsList.innerHTML = "";
+
+    exams.forEach(function(exam) {
+        var currentTime = new Date();
+        var timeDiff = exam.time - currentTime;
+        
+        // Skip if the exam has already started
+        if (timeDiff <= 0) {
+            return;
+        }
+
+        var daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+        // Format the date, month, and year
+        var date = exam.time.getDate();
+        var month = exam.time.getMonth() + 1; // Month is zero-indexed
+        var year = exam.time.getFullYear();
+
+        // Get the day name
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var dayName = dayNames[exam.time.getDay()];
+
+        var listItem = document.createElement("li");
+
+        // Construct the remaining time message
+        var remainingTimeMessage = " - ";
+
+        if (daysLeft > 0) {
+            remainingTimeMessage += daysLeft + " days ";
+        }
+
+        remainingTimeMessage += hoursLeft + "h " + minutesLeft + "m left";
+
+        // Concatenate exam details and remaining time
+        listItem.textContent = exam.name + " - " + dayName + ", " + date + "/" + month + "/" + year + remainingTimeMessage;
+        
+        examsList.appendChild(listItem);
+    });
 }
 
-// Example current exam data
-const currentExams = [
-    { name: "MM CT1", time: new Date("2024-05-12T13:00:00") },
-    { name: "MID start", time: new Date("2024-06-08T10:30:00") },
-    { name: "DSML Lab perf", time: new Date("2024-05-13T08:30:00") },
-    { name: "MLD CT1", time: new Date("2024-05-15T10:00:00") },
-    { name: "BIO CT1", time: new Date("2024-05-19T08:30:00") }
-];
+// Call updateExamsTime function initially
+updateExamsTime();
 
-// Convert current exam data to CSV format
-const csvData = convertToCSV(currentExams);
-console.log(csvData); // Output CSV data
+// Update time every minute
+setInterval(updateExamsTime, 60000);
