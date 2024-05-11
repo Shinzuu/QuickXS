@@ -1,57 +1,82 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
+    max-width: 1080px;
+    margin: 0 auto;
     display: flex;
-    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.left {
-    flex: 7;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
+.left,
 .right {
-    flex: 3;
-    background-color: #e0e0e0;
-    padding: 20px;
+    width: 48%;
 }
 
-.item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 960px) {
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
     }
-
-    .left, .right {
-        flex: none;
+    
+    .left,
+    .right {
         width: 100%;
     }
+}
 
-    .item {
-        padding: 10px;
-        font-size: 14px;
-    }
+/* Left Section (PDFs) */
+.left {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    #incomingExams {
-        display: none;
-    }
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
 
-    #showExamsButton {
-        display: block;
-        margin-top: 10px;
-        cursor: pointer;
-    }
+.item img {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.item span {
+    font-size: 16px;
+}
+
+/* Right Section (Incoming Exams) */
+.right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#incomingExams {
+    list-style-type: none;
+    padding: 0;
+}
+
+#incomingExams li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
 }

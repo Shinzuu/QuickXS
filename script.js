@@ -2,8 +2,10 @@
 function updateExamsTime() {
     var exams = [
         { name: "MM CT1", time: new Date("2024-05-12T13:00:00") }, // Example exam data
-        { name: "MID ", time: new Date("2024-06-08T10:30:00") },
+        { name: "MID start", time: new Date("2024-06-08T10:30:00") },
         { name: "DSML Lab perf", time: new Date("2024-05-13T08:30:00") },
+        { name: "MLD CT1", time: new Date("2024-05-15T10:00:00") },
+        { name: "BIO CT1", time: new Date("2024-05-19T08:30:00") }
     ];
 
     // Sort exams based on start time
@@ -17,6 +19,12 @@ function updateExamsTime() {
     exams.forEach(function(exam) {
         var currentTime = new Date();
         var timeDiff = exam.time - currentTime;
+        
+        // Skip if the exam has already started
+        if (timeDiff <= 0) {
+            return;
+        }
+
         var daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         var hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
@@ -25,6 +33,10 @@ function updateExamsTime() {
         var date = exam.time.getDate();
         var month = exam.time.getMonth() + 1; // Month is zero-indexed
         var year = exam.time.getFullYear();
+
+        // Get the day name
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var dayName = dayNames[exam.time.getDay()];
 
         var listItem = document.createElement("li");
 
@@ -38,7 +50,7 @@ function updateExamsTime() {
         remainingTimeMessage += hoursLeft + "h " + minutesLeft + "m left";
 
         // Concatenate exam details and remaining time
-        listItem.textContent = exam.name + " - " + date + "/" + month + "/" + year + remainingTimeMessage;
+        listItem.textContent = exam.name + " - " + dayName + ", " + date + "/" + month + "/" + year + remainingTimeMessage;
         
         examsList.appendChild(listItem);
     });
