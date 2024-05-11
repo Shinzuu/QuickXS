@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Portal</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#item1">item1</a></li>
-            <li><a href="#item2">item2</a></li>
-            <li><a href="#item3">item3</a></li>
-            <li><a href="#item4">item4</a></li>
-            <li><a href="#item5">item5</a></li>
+
+<div class="container">
+    <div class="left">
+        <div class="item" onclick="openPdf('https://github.com/Shinzuu/4thSem-Lectures-Materials/blob/abb6592e63dfd689ef2320e0f54360c96124f37d/ALGO/Lecture/ALGO-latex.pdf')">
+            <img src="image1.jpg" alt="Image 1">
+            <span>ALGO</span>
+        </div>
+        <div class="item" onclick="openPdf('https://github.com/Shinzuu/4thSem-Lectures-Materials/blob/abb6592e63dfd689ef2320e0f54360c96124f37d/BIO/Lecture/BIO-latex.pdf')">
+            <img src="image2.jpg" alt="Image 2">
+            <span>BIO</span>
+        </div>
+        <div class="item" onclick="openPdf('https://github.com/Shinzuu/4thSem-Lectures-Materials/blob/abb6592e63dfd689ef2320e0f54360c96124f37d/DMS/Lecture/DMS-latex.pdf')">
+            <img src="image3.jpg" alt="Image 3">
+            <span>DMS</span>
+        </div>
+        <div class="item" onclick="openPdf('https://github.com/Shinzuu/4thSem-Lectures-Materials/blob/abb6592e63dfd689ef2320e0f54360c96124f37d/MLD/Lecture/MLD-latex.pdf')">
+            <img src="image4.jpg" alt="Image 4">
+            <span>MLD</span>
+        </div>
+        <div class="item" onclick="openPdf('https://github.com/Shinzuu/4thSem-Lectures-Materials/blob/abb6592e63dfd689ef2320e0f54360c96124f37d/MM/Lecture/MM-latex.pdf')">
+            <img src="image5.jpg" alt="Image 5">
+            <span>MM</span>
+        </div>
+    </div>
+    <div class="right">
+        <h2>Incoming Exams</h2>
+        <ul id="incomingExams">
+            <!-- Exam list will be dynamically populated here -->
         </ul>
-    </nav>
-    <main>
-        <h2><u>Semester Lecture Notes</u></h2>
-        <section id="item1">
-            <!-- Content for item 1 -->
-        </section>
-        <section id="item2">
-            <!-- Content for item 2 -->
-        </section>
-        <section id="item3">
-            <!-- Content for item 3 -->
-        </section>
-        <section id="item4">
-            <!-- Content for item 4 -->
-        </section>
-        <section id="item5">
-            <!-- Content for item 5 -->
-        </section>
-    </main>
-    <footer>
-        <!-- Footer content -->
-        <p>&copy; <a href="www.github.com/shinzuu" target="_blank">Shinzuu</a> </p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

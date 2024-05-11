@@ -1,3 +1,57 @@
-* {
-    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 7;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.right {
+    flex: 3;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 960px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .item {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #incomingExams {
+        display: none;
+    }
+
+    #showExamsButton {
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+    }
 }
