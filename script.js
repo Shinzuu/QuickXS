@@ -3,7 +3,7 @@ function updateExamsTime() {
     var exams = [
         { name: "ALGO CT1", time: new Date("2024-05-21T13:00:00") },
         { name: "MID start", time: new Date("2024-06-08T10:30:00") },
-        { name: "BIO CT1", time: new Date("2024-05-19T08:30:00") },
+        { name: "BIO CT1", time: new Date("2024-05-24T08:30:00") },
         { name: "Final start", time: new Date("2024-08-03T10:30:00") }
     ];
 
