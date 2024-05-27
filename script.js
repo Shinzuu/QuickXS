@@ -1,9 +1,8 @@
 // Function to update the time left for each exam
 function updateExamsTime() {
     var exams = [
-        { name: "ALGOL perf test", time: new Date("2024-05-27T11:30:00") },
-        { name: "BIO CT1", time: new Date("2024-05-26T08:30:00") },
-        { name: "DMS CT1", time: new Date("2024-05-25T08:30:00") },
+        { name: "ALGOL perf test(postponed)", time: new Date("2024-06-02T11:30:00") },
+        { name: "BIO CT2( ECG [page no. 9-27] )", time: new Date("2024-06-02T08:45:00") },
         { name: "MID start", time: new Date("2024-06-08T10:30:00") },
         { name: "Final start", time: new Date("2024-08-03T10:30:00") }
     ];
