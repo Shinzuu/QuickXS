@@ -1,101 +1,114 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #f1f8e9; /* Light lime background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #34495e; /* Dark blue-gray text color */
 }
 
 .container {
-    max-width: 1080px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e0f7fa; /* Light cyan background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: #e1f5fe; /* Light cyan background */
+    border: 1px solid #b3e5fc; /* Lighter cyan border */
 }
 
-.left,
-.right {
-    width: 48%;
+.table thead {
+    background-color: #039be5; /* Deep sky blue header */
+    color: #ffffff;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: 0 10px; /* Equal amount of margin on both sides */
-    }
-    
-    .left,
-    .right {
-        width: calc(100% - 20px); /* Adjust width to account for margins */
-        margin: 10px 0; /* Add vertical margin */
-    }
+.table tbody tr {
+    background-color: #ffffff;
 }
 
-/* Left Section (PDFs) */
-.left {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.table tbody tr:hover {
+    background-color: #d3fb6f; /* Light gray on hover */
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    cursor: pointer;
-    color: #333; /* Ensure text color stays the same */
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #25a0d9;
+    text-align: center;
 }
 
-.item img {
-    width: 120px; /* Adjust image size */
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-.item span {
-    font-size: 24px; /* Adjust text size */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Show ellipsis for overflow text */
-}
-
-/* Right Section (Incoming Exams) */
-.right {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.right h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-#incomingExams {
-    list-style-type: none;
-    padding: 0;
-}
-
-#incomingExams li {
+.table caption {
+    caption-side: top;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
+    color: #0288d1; /* Darker blue for caption */
 }
 
-.exam-name {
-    font-size: 20px;
+.list-container {
+    background-color: #66bb6a; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Additional styles for event table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.event-table th,
+.event-table td {
+    border: 1px solid #0c7aa9; /* Light gray border */
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.event-table th {
+    background-color: #f0f0f0; /* Light gray header */
     font-weight: bold;
-    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
-.exam-day,
-.exam-date,
-.remaining-time {
-    font-size: 16px;
-    color: #666;
+.event-table .title-column {
+    width: 30%;
+}
+
+.event-table .date-column {
+    width: 20%;
+}
+
+.event-table .time-column {
+    width: 20%;
+}
+
+.event-table .remaining-time {
+    color: #e53935; /* Light red for remaining time */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
 }
