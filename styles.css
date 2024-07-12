@@ -1,101 +1,73 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #2c3e50;
 }
 
 .container {
-    max-width: 1080px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.left,
-.right {
-    width: 48%;
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: 0 10px; /* Equal amount of margin on both sides */
-    }
-    
-    .left,
-    .right {
-        width: calc(100% - 20px); /* Adjust width to account for margins */
-        margin: 10px 0; /* Add vertical margin */
-    }
-}
-
-/* Left Section (PDFs) */
-.left {
-    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.item {
-    display: flex;
-    align-items: center;
+.table-container {
     margin-bottom: 20px;
-    cursor: pointer;
-    color: #333; /* Ensure text color stays the same */
+    text-align: center;
 }
 
-.item img {
-    width: 120px; /* Adjust image size */
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ecf0f1;
 }
 
-.item span {
-    font-size: 24px; /* Adjust text size */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+.table thead {
+    background-color: #2980b9;
+    color: #ffffff;
 }
 
-/* Right Section (Incoming Exams) */
-.right {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.table tbody tr {
+    background-color: #ecf0f1;
 }
 
-.right h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+.table tbody tr:hover {
+    background-color: #dcdde1;
 }
 
-#incomingExams {
-    list-style-type: none;
-    padding: 0;
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #3498db;
+    text-align: center;
 }
 
-#incomingExams li {
+.table caption {
+    caption-side: top;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
+    color: #3498db;
 }
 
-.exam-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.list-container {
+    background-color: #2ecc71;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
 }
 
-.exam-day,
-.exam-date,
-.remaining-time {
-    font-size: 16px;
-    color: #666;
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
 }
