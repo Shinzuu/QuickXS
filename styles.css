@@ -4,11 +4,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     background-color: #f1f8e9; /* Light lime background */
+    color: #34495e; /* Dark blue-gray text color */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #34495e; /* Dark blue-gray text color */
+    min-height: 100vh; /* Use min-height for responsiveness */
 }
 
 .container {
@@ -19,6 +19,7 @@ body {
     background-color: #e0f7fa; /* Light cyan background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Ensure container can scroll if needed */
 }
 
 .table-container {
@@ -71,7 +72,7 @@ body {
 
 /* Additional styles for event table */
 .event-table {
-    width: 100%;
+    width: 100%; /* Make event table full width */
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -90,16 +91,11 @@ body {
     text-transform: uppercase;
 }
 
-.event-table .title-column {
-    width: 30%;
-}
-
-.event-table .date-column {
-    width: 20%;
-}
-
-.event-table .time-column {
-    width: 20%;
+.event-table .title-column,
+.event-table .date-column,
+.event-table .time-column,
+.event-table .remaining-time {
+    width: 25%; /* Equal width for columns */
 }
 
 .event-table .remaining-time {
