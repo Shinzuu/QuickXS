@@ -19,7 +19,7 @@ body {
     background-color: #e0f7fa; /* Light cyan background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: auto; /* Ensure container can scroll if needed */
+    overflow-x: auto; /* Horizontal scroll if needed */
 }
 
 .table-container {
@@ -105,6 +105,23 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: 100%; /* Full width on smaller screens */
+        overflow-x: scroll; /* Horizontal scroll for smaller screens */
+    }
+
+    .table-container {
+        overflow-x: auto; /* Allow table container to scroll horizontally */
+    }
+
+    .table,
+    .event-table {
+        min-width: 100%; /* Ensure tables take up full width */
+    }
+
+    .event-table .title-column,
+    .event-table .date-column,
+    .event-table .time-column,
+    .event-table .remaining-time {
+        width: auto; /* Allow columns to adjust based on content */
     }
 }
