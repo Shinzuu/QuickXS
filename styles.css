@@ -44,7 +44,7 @@ body {
 }
 
 .table tbody tr:hover {
-    background-color: #b7ff00; /* Light gray on hover */
+    background-color: #d3fb6f; /* Light gray on hover */
 }
 
 .table th,
