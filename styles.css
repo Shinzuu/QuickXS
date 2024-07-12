@@ -1,21 +1,22 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #f1f8e9; /* Light lime background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #2c3e50;
+    color: #34495e; /* Dark blue-gray text color */
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #e0f7fa; /* Light cyan background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -29,26 +30,27 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #ecf0f1;
+    background-color: #e1f5fe; /* Light cyan background */
+    border: 1px solid #b3e5fc; /* Lighter cyan border */
 }
 
 .table thead {
-    background-color: #2980b9;
+    background-color: #039be5; /* Deep sky blue header */
     color: #ffffff;
 }
 
 .table tbody tr {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
 }
 
 .table tbody tr:hover {
-    background-color: #dcdde1;
+    background-color: #b7ff00; /* Light gray on hover */
 }
 
 .table th,
 .table td {
-    padding: 10px;
-    border: 1px solid #3498db;
+    padding: 12px;
+    border: 1px solid #25a0d9;
     text-align: center;
 }
 
@@ -56,14 +58,53 @@ body {
     caption-side: top;
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #3498db;
+    color: #0288d1; /* Darker blue for caption */
 }
 
 .list-container {
-    background-color: #2ecc71;
+    background-color: #66bb6a; /* Light green background */
     padding: 20px;
     border-radius: 8px;
     color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Additional styles for event table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.event-table th,
+.event-table td {
+    border: 1px solid #0c7aa9; /* Light gray border */
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.event-table th {
+    background-color: #f0f0f0; /* Light gray header */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.event-table .title-column {
+    width: 30%;
+}
+
+.event-table .date-column {
+    width: 20%;
+}
+
+.event-table .time-column {
+    width: 20%;
+}
+
+.event-table .remaining-time {
+    color: #e53935; /* Light red for remaining time */
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

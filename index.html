@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickXS</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -21,45 +22,60 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    <tr>
+                    <tr class="Saturday">
                         <td>Saturday</td>
                         <td>DSM - 408</td>
                         <td>BIO - 410</td>
                         <td colspan="2">MicroL - 503</td>
                     </tr>
-                    <tr>
+                    <tr class="Sunday">
                         <td>Sunday</td>
                         <td>BIO - 610</td>
                         <td>DMS - 610</td>
                         <td></td>
                         <td>MM - 404</td>
                     </tr>
-                    <tr>
+                    <tr class="Monday">
                         <td>Monday</td>
                         <td colspan="2">DMSL - 604</td>
                         <td colspan="2">ALGOL - 508</td>
                     </tr>
-                    <tr>
+                    <tr class="Tuesday">
                         <td>Tuesday</td>
                         <td></td>
                         <td>MAT - 409</td>
-                        <td >Algo - 408</td>
+                        <td>Algo - 408</td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="Wednesday">
                         <td>Wednesday</td>
                         <td></td>
                         <td>MAT - 510</td>
-                        <td >Algo - 406</td>
+                        <td>Algo - 406</td>
                         <td>MM - 612</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="list-container">
-            <!-- List items go here -->
+        <div class="table-container">
+            <h2>Upcoming Events</h2>
+            <table class="event-table">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th class="title-column">Title</th>
+                        <th class="date-column">Date</th>
+                        <th class="time-column">Time</th>
+                        <th>Remaining Time</th>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-events-table">
+                    <!-- Events will be dynamically loaded here -->
+                </tbody>
+            </table>
         </div>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>

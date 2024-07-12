@@ -1,28 +1,121 @@
-function highlightClasses() {
-    const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-    const today = new Date();
-    let currentDay = today.getDay();
-    let currentHour = today.getHours();
-    let currentMinute = today.getMinutes();
-    
-    if (currentDay === 4 || currentDay === 5 || (currentDay === 6 && (currentHour > 14 || (currentHour === 14 && currentMinute > 30)))) {
-        currentDay = 6; // Highlight Saturday if it's Thursday, Friday, or Saturday after 2:30 PM
-    } else {
-        if (currentHour > 14 || (currentHour === 14 && currentMinute > 30)) {
-            currentDay = (currentDay + 1) % 7; // Move to the next day after 2:30 PM
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to fetch events from JSON file
+    async function fetchEvents() {
+        try {
+            const response = await fetch('seed_data.json');
+            if (!response.ok) {
+                throw new Error('Failed to fetch events');
+            }
+            const eventsData = await response.json();
+            return eventsData;
+        } catch (error) {
+            console.error('Error fetching events:', error.message);
+            return []; // Return empty array on error
         }
     }
 
-    const classDay = days[currentDay];
-    const rows = document.querySelectorAll("tbody tr");
-    rows.forEach(row => {
-        if (row.classList.contains(classDay)) {
-            row.classList.add("highlight");
-        } else {
-            row.classList.remove("highlight");
-        }
-    });
-}
+    // Function to calculate remaining time and sort events
+    function calculateAndSortEvents(events) {
+        // Get current date and time
+        const now = new Date();
 
-highlightClasses();
-setInterval(highlightClasses, 60000); // Check every minute
+        // Calculate remaining time and filter out past events
+        const upcomingEvents = events.filter(event => {
+            const deadlineDateTime = new Date(`${event.date} ${event.time}`);
+            if (deadlineDateTime < now) {
+                return false; // Skip past events
+            }
+
+            // Calculate remaining time in milliseconds
+            const diffTime = deadlineDateTime - now;
+
+            // Convert remaining time to days, hours, and minutes
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Add remaining time details to event object
+            event.remainingDays = diffDays;
+            event.remainingHours = diffHours;
+            event.remainingMinutes = diffMinutes;
+
+            return true;
+        });
+
+        // Sort events by remaining time (ascending)
+        upcomingEvents.sort((a, b) => {
+            if (a.remainingDays !== b.remainingDays) {
+                return a.remainingDays - b.remainingDays;
+            }
+            if (a.remainingHours !== b.remainingHours) {
+                return a.remainingHours - b.remainingHours;
+            }
+            return a.remainingMinutes - b.remainingMinutes;
+        });
+
+        return upcomingEvents;
+    }
+
+    // Function to display events in the upcoming events section as a table
+    function displayEvents(events) {
+        const upcomingEventsTable = document.getElementById('upcoming-events-table');
+        if (!upcomingEventsTable) return;
+
+        // Clear existing content
+        upcomingEventsTable.innerHTML = '';
+
+        // Populate the table with event rows
+        events.forEach((event, index) => {
+            const row = document.createElement('tr');
+
+            // Index column
+            const indexCell = document.createElement('td');
+            indexCell.textContent = index + 1;
+            row.appendChild(indexCell);
+
+            // Title column
+            const titleCell = document.createElement('td');
+            titleCell.textContent = event.title;
+            row.appendChild(titleCell);
+
+            // Date column
+            const formattedDate = new Date(event.date).toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            const dateCell = document.createElement('td');
+            dateCell.textContent = formattedDate;
+            row.appendChild(dateCell);
+
+            // Time column
+            const timeCell = document.createElement('td');
+            timeCell.textContent = event.time;
+            row.appendChild(timeCell);
+
+            // Remaining time column
+            const remainingTimeCell = document.createElement('td');
+            const remainingDays = event.remainingDays;
+            const remainingHours = event.remainingHours;
+            const remainingMinutes = event.remainingMinutes;
+            const remainingTimeText = `${remainingDays}d ${remainingHours}h ${remainingMinutes}m`;
+            remainingTimeCell.textContent = remainingTimeText;
+            remainingTimeCell.classList.add('remaining-time');
+            row.appendChild(remainingTimeCell);
+
+            // Append row to the table
+            upcomingEventsTable.appendChild(row);
+        });
+    }
+
+    // Fetch events, calculate remaining time, sort, and display
+    fetchEvents()
+        .then(events => {
+            const upcomingEvents = calculateAndSortEvents(events);
+            displayEvents(upcomingEvents);
+        })
+        .catch(error => {
+            console.error('Error fetching or displaying events:', error);
+        });
+});
