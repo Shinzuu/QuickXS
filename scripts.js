@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Function to convert time string (e.g., "08:30" or "13:00") to 24-hour format
+    function convertTo24Hour(time) {
+        const [hourStr, minuteStr] = time.split(':');
+        let hour = parseInt(hourStr, 10);
+        const minute = parseInt(minuteStr, 10);
+
+        // Return hour and minute as is for 24-hour format
+        return { hour24: hour, minute };
+    }
+
     // Function to calculate remaining time and sort events
     function calculateAndSortEvents(events) {
         // Get current date and time
@@ -21,7 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Calculate remaining time and filter out past events
         const upcomingEvents = events.filter(event => {
-            const deadlineDateTime = new Date(`${event.date} ${event.time}`);
+            const { hour24, minute } = convertTo24Hour(event.time);
+            const deadlineDateTime = new Date(event.date);
+            deadlineDateTime.setHours(hour24, minute, 0, 0);
+
             if (deadlineDateTime < now) {
                 return false; // Skip past events
             }
