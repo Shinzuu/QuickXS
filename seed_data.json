@@ -15,8 +15,8 @@
         "time": "13:00"
       },
       {
-        "title": "ALGO Report 2",
-        "date": "2024-07-15",
+        "title": "ALGO Report 3",
+        "date": "2024-07-22",
         "time": "11:30"
       },
       {
@@ -53,11 +53,6 @@
         "title": "MML Performance",
         "date": "2024-07-20",
         "time": "11:30"
-      },
-      {
-        "title": "ALGO CT 2 {single source shortest path algorithm + fractional & 0/1 knapsack}",
-        "date": "2024-07-16",
-        "time":"11:30"
       },
       {
         "title": "MLD CT 3 {1&2 degree Diff. EQ}",
