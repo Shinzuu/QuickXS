@@ -1,23 +1,18 @@
 [
     {
-        "title": "DMS CT3 {date not set}",
+        "title": "DMS CT3 {unconfirmed}",
         "date": "9999-08-03",
         "time": "08:30"
       },
       {
-        "title": "MM CT3 {date not set}",
+        "title": "MM CT3 {unconfirmed}",
         "date": "9999-07-31",
         "time": "13:00"
       },
       {
         "title": "MM Assignment {date not set}",
-        "date": "9999-08-07",
+        "date": "2024-09-18",
         "time": "13:00"
-      },
-      {
-        "title": "ALGO Report 3 {date not set}",
-        "date": "9999-07-22",
-        "time": "11:30"
       },
       {
         "title": "DMSL Performance",
@@ -55,8 +50,8 @@
         "time": "11:30"
       },
       {
-        "title": "MLD CT 3 {date not set}",
-        "date": "9999-07-24",
+        "title": "MLD assignment {CT3 alternative}",
+        "date": "2024-09-18",
         "time": "10:00"
       },
       {
@@ -70,9 +65,9 @@
         "time": "11:30"
       },
       {
-        "title": "ADA Assignment Submission {date not set}",
-        "date": "9999-09-14",
-        "time": "08:30"
+        "title": "ADA Assignment {date not set}",
+        "date": "2024-09-18",
+        "time": "11:30"
       },
       {
         "title": "DMSL Project+Report Showcase {at 510 }",
@@ -80,9 +75,9 @@
         "time": "13:00"
       },
       {
-        "title": "DMS Assignment {date not set}",
-        "date": "2024-09-16",
-        "time": "08:30"
+        "title": "DMS Assignment {date not confirmed}",
+        "date": "2024-09-15",
+        "time": "10:00"
       }
     ]
   
