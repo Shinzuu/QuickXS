@@ -1,16 +1,16 @@
 [
     {
-        "title": "DMS CT3 {unconfirmed}",
-        "date": "9999-08-03",
+        "title": "DMS assignment against CT3",
+        "date": "2024-09-18",
         "time": "08:30"
       },
       {
-        "title": "MM CT3 {unconfirmed}",
-        "date": "9999-07-31",
+        "title": "MM assignment against CT3",
+        "date": "2024-09-18",
         "time": "13:00"
       },
       {
-        "title": "MM Assignment {date not set}",
+        "title": "MM Assignment Final",
         "date": "2024-09-18",
         "time": "13:00"
       },
@@ -50,12 +50,12 @@
         "time": "11:30"
       },
       {
-        "title": "MLD assignment {CT3 alternative}",
+        "title": "MLD assignment against CT3",
         "date": "2024-09-18",
         "time": "10:00"
       },
       {
-        "title": "BIO CT 3 ",
+        "title": "BIO CT 3",
         "date": "2024-09-08",
         "time": "08:30"
       },
@@ -65,7 +65,7 @@
         "time": "11:30"
       },
       {
-        "title": "ADA Assignment {date not set}",
+        "title": "ADA Assignment Final",
         "date": "2024-09-18",
         "time": "11:30"
       },
@@ -75,7 +75,7 @@
         "time": "13:00"
       },
       {
-        "title": "DMS Assignment {date not confirmed}",
+        "title": "DMS Assignment Final",
         "date": "2024-09-15",
         "time": "10:00"
       }
