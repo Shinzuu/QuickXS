@@ -1,23 +1,18 @@
 [
     {
-        "title": "DMS assignment against CT3 {soft}",
-        "date": "2024-09-18",
-        "time": "08:30"
+        "title": "DMS assignment against CT3 {soft}",
+        "date": "2024-09-17",
+        "time": "23:59"
       },
       {
-        "title": "MM assignment against CT3 {soft}",
-        "date": "2024-09-18",
-        "time": "13:00"
+        "title": "MM assignment against CT3 {soft}",
+        "date": "2024-09-17",
+        "time": "23:59"
       },
       {
-        "title": "MM Assignment Final {HARD}",
-        "date": "2024-09-18",
-        "time": "13:00"
-      },
-      {
-        "title": "DMSL Performance",
-        "date": "2024-09-09",
-        "time": "08:30"
+        "title": "MM Assignment Final {soft}",
+        "date": "2024-09-17",
+        "time": "23:59"
       },
       {
         "title": "Bio Final ",
@@ -45,19 +40,14 @@
         "time": "10:00"
       },
       {
-        "title": "MML Quiz",
-        "date": "2024-09-07",
-        "time": "11:30"
-      },
-      {
-        "title": "MLD assignment against CT3 {HARD}",
+        "title": "MLD assignment against CT3 {HARD}",
         "date": "2024-09-18",
         "time": "10:00"
       },
       {
-        "title": "BIO CT 3",
-        "date": "2024-09-08",
-        "time": "08:30"
+        "title": "MLD assignment Final {HARD}",
+        "date": "2024-09-18",
+        "time": "10:00"
       },
       {
         "title": "MML Project+Report Submission",
@@ -65,8 +55,13 @@
         "time": "11:30"
       },
       {
-        "title": "ADA Assignment Final",
+        "title": "ADA Assignment Final {Hand written}",
         "date": "2024-09-18",
+        "time": "11:30"
+      },
+      {
+        "title": "ADA Final Lab Test",
+        "date": "2024-09-16",
         "time": "11:30"
       },
       {
@@ -75,9 +70,9 @@
         "time": "13:00"
       },
       {
-        "title": "DMS Assignment Final {HARD}",
-        "date": "2024-09-15",
-        "time": "10:00"
+        "title": "DMS Assignment Final {soft}",
+        "date": "2024-09-17",
+        "time": "23:59"
       },
       {
         "title": "Bio Assignment Final {soft}",
