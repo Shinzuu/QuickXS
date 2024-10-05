@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        .choice {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .choice:hover {
+            background: #d1d1d1;
+        }
+        .correct {
+            background: #d4edda;
+            color: green;
+        }
+        .incorrect {
+            background: #f8d7da;
+            color: red;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Algorithm Quiz</h1>
+        <div id="quiz"></div>
+        <button id="nextBtn" class="hidden">Next Question</button>
+    </div>
+
+    <script>
+        const quizContainer = document.getElementById('quiz');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentQuestionIndex = 0;
+        let questions = [];
+
+        // Load questions from algo.json
+        async function loadQuestions() {
+            try {
+                const response = await fetch('algo.json'); // Update this if necessary
+                const data = await response.json();
+                // Flatten all questions from all topics into a single array
+                questions = data.topics.flatMap(topic => topic.questions);
+                showQuestion();
+            } catch (error) {
+                console.error('Error loading JSON:', error);
+            }
+        }
+
+        function showQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const questionData = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question">${questionData.question}</div>
+                    ${questionData.choices.map((choice, index) => `
+                        <div class="choice" data-index="${index}">${choice}</div>
+                    `).join('')}
+                `;
+
+                const choices = document.querySelectorAll('.choice');
+                choices.forEach(choice => {
+                    choice.addEventListener('click', checkAnswer);
+                });
+
+                nextBtn.classList.add('hidden'); // Hide next button initially
+            } else {
+                quizContainer.innerHTML = `<h2>Quiz Completed!</h2>`;
+                nextBtn.classList.add('hidden');
+            }
+        }
+
+        function checkAnswer(event) {
+            const selectedChoice = event.target;
+            const question = questions[currentQuestionIndex];
+            const correctAnswerIndex = question.choices.findIndex(choice => choice.startsWith(question.answer));
+
+            // Check if the selected answer is correct
+            if (parseInt(selectedChoice.dataset.index) === correctAnswerIndex) {
+                selectedChoice.classList.add('correct');
+            } else {
+                selectedChoice.classList.add('incorrect');
+                const correctChoice = Array.from(document.querySelectorAll('.choice')).find(choice => choice.textContent.startsWith(question.answer));
+                if (correctChoice) {
+                    correctChoice.classList.add('correct'); // Highlight correct answer
+                }
+            }
+
+            // Disable all choices after selecting one
+            const choices = document.querySelectorAll('.choice');
+            choices.forEach(choice => {
+                choice.style.pointerEvents = 'none';
+            });
+
+            nextBtn.classList.remove('hidden'); // Show next button
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentQuestionIndex++; // Move to next question
+            showQuestion(); // Show next question
+        });
+
+        // Start the quiz
+        loadQuestions();
+    </script>
+</body>
+</html>
