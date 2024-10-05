@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 1000;
     background-color: #f1f8e9; /* Light lime background */
     color: #34495e; /* Dark blue-gray text color */
     display: flex;
@@ -124,4 +124,57 @@ body {
     .event-table .remaining-time {
         width: auto; /* Allow columns to adjust based on content */
     }
+}
+/* Final Exam Lecture Sheets Section */
+.table-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.table-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0275d8; /* Blue color for the heading */
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.col {
+    margin: 0 10px;
+}
+
+.col strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0275d8; /* Eye-catching color for the button labels */
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background-color: #5bc0de; /* Button color */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #31b0d5; /* Darker button color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.btn.disabled {
+    background-color: #b5b5b5; /* Ash color for disabled buttons */
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none; /* Prevent clicking */
 }

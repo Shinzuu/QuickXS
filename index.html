@@ -15,9 +15,10 @@
 
 <body>
     <div class="container">
+        <!-- Routine Table -->
         <div class="table-container">
             <table class="table table-striped table-hover table-borderless table-primary align-middle">
-                <thead class="table-light">
+                <thead>
                     <caption>Class Routine</caption>
                     <tr>
                         <th>Day</th>
@@ -27,7 +28,7 @@
                         <th>1:00 pm - 2:30 pm</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody>
                     <tr class="Saturday">
                         <td>Saturday</td>
                         <td>DSM - 408/510</td>
@@ -63,7 +64,48 @@
                 </tbody>
             </table>
         </div>
-        <div class="table-container">
+
+        <!-- Final Exam Lecture Sheets Section -->
+<div class="table-container">
+    <h2>Final Exam Lecture Sheets</h2>
+    <div class="row">
+        <div class="col">
+            <strong>BIO</strong>
+            <a href="https://docs.google.com/document/d/185eWH9lkdczl3-US-2jPFXpbaSPlzXkjEn9v5818rGI/edit#heading=h.dqtjqmt0jcoy"
+                target="_blank" class="btn">
+                <i class="bi bi-file-earmark-pdf"></i> View DOC
+            </a>
+        </div>
+        <div class="col">
+            <strong>DMS</strong>
+            <a href="https://docs.google.com/document/d/1lMscoACaSxS72UA3fQEeztkFvIZ20-ZZ0kuURWqNEvw/edit?usp=sharing" target="_blank" class="btn">
+                <i class="bi bi-file-earmark-pdf"></i> View DOC
+            </a>
+        </div>
+        <div class="col">
+            <strong>ALGO</strong>
+            <a href="https://docs.google.com/document/d/17ZxoDclbqdmIQ2oaiPZXud4qptHcnWcTy6bS0z7jXM0/edit?usp=sharing" target="_blank" class="btn">
+                <i class="bi bi-file-earmark-pdf"></i> View DOC
+            </a>
+        </div>
+        <div class="col">
+            <strong>MM</strong>
+            <a href="#" target="_blank" class="btn disabled">
+                <i class="bi bi-file-earmark-pdf"></i> View DOC
+            </a>
+        </div>
+        <div class="col">
+            <strong>MLDE</strong>
+            <a href="https://docs.google.com/document/d/1mxST3ryHkNn91sLkCD_57pdoQcRPjEwR6CEai-MvdWg/edit?usp=sharing" target="_blank" class="btn">
+                <i class="bi bi-file-earmark-pdf"></i> View DOC
+            </a>
+        </div>
+    </div>
+
+
+
+        <!-- Upcoming Events Section -->
+        <div class="table-container mt-4">
             <h2>Upcoming Events</h2>
             <table class="event-table">
                 <thead>
@@ -72,7 +114,7 @@
                         <th class="title-column">Title</th>
                         <th class="date-column">Date</th>
                         <th class="time-column">Time</th>
-                        <th>Remaining Time</th>
+                        <th class="remaining-time">Remaining Time</th>
                     </tr>
                 </thead>
                 <tbody id="upcoming-events-table">
@@ -80,8 +122,8 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
+ 
+    <footer><a href="https://github.com/shinzuu">Shinzuu</a> | <a href="https://github.com/shinzuu/quickxs"><Source>Source</Source></a> </footer>
     <script src="scripts.js"></script>
 </body>
 
