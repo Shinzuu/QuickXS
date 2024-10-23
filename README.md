@@ -1,2 +1,2 @@
 # QuickPDF
-site that allows quick access to pdf from public links + upcoming exams
+Place holder for when no semester is running 
