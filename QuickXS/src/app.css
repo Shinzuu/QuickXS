@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.oldenburg-regular {
+    font-family: "Oldenburg", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
