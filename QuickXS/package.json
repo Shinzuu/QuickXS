@@ -33,8 +33,11 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.47",
 		"publint": "^0.2.0",
 		"svelte": "^5.0.0",
+		"tailwindcss": "^3.4.14",
 		"typescript": "^5.3.2",
 		"vite": "^5.0.11"
 	}
