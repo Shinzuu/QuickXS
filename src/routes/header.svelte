@@ -13,7 +13,7 @@
     }
 </script>
 
-<header class="bg-blue-600 text-white shadow-lg rounded-full mx-auto my-4 px-6 py-3 flex items-center justify-center w-1/4 fixed top-4 right-4">
+<header class="bg-blue-600 text-white shadow-lg rounded-full mx-auto my-4 px-6 py-3 flex items-center justify-center w-1/3 fixed top-4 right-4">
     <!-- Desktop Navigation (Right-Aligned and Spaced Evenly) -->
     <nav class="hidden md:flex space-x-8">
         {#each navItems as item}

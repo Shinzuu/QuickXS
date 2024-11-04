@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        width: 90%; /* Wider on mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    footer {
+        width: 100%; /* Full width for mobile footer */
+        justify-content: center; /* Center content */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
+
+/* Optional: Maintain aspect ratio for header */
+header {
+    max-width: 400px; /* Maximum width for header */
+}
