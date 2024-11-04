@@ -1,21 +1,16 @@
-<!doctype html>
-<html lang="en">
+<!-- src/App.svelte -->
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	%sveltekit.head%
-</head>
+<script>
+    import Header from './components/header.svelte'; // Ensure the path is correct
+</script>
 
-<body data-sveltekit-preload-data="hover">
-	<div>%sveltekit.body%</div>
-</body>
+<style>
+    /* Your global styles can go here */
+</style>
 
-</html>
+<!-- Include Header component -->
+<Header />
+
+<main>
+    <slot /> <!-- This allows routed content to be displayed here -->
+</main>
