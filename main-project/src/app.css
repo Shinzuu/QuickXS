@@ -3,83 +3,189 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root variables for font and color scheme */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* General link styles */
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  color: #d4a373; /* Use buff-500 from your palette */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
 }
 
+a:hover {
+  color: #b3c146; /* A contrasting shade from the palette */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Body layout */
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: flex-start;
   min-width: 320px;
   min-height: 100vh;
-  padding: 0;
+  background-color: #f5f7ef; /* Background color from tea_green palette */
+  padding: 1rem;
+  color: #2d331a; /* Dark color from tea_green palette */
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
 }
 
+/* Header and Title Styling */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: #5b6635; /* Use tea_green-200 */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+h1:hover {
+  color: #b3c146; /* Subtle hover effect on header */
 }
 
+/* Centered app container */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button {
+/* Routine container */
+.routine-container {
+  display: grid;
+  grid-template-columns: 1fr repeat(6, 1fr);
+  grid-template-rows: auto repeat(19, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Time column at top */
+.time-column {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-slot {
+  padding: 0.75rem;
+  background-color: #ccd5ae;
   border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.time-slot:hover {
+  background-color: #b3c146; /* Highlight on hover */
+  color: #fff;
+}
+
+/* Days column on the side */
+.day-column {
+  grid-row: span 19;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.day-slot {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2d331a;
+  background-color: #f2f4df; /* A lighter beige shade */
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-slot:hover {
+  background-color: #b3c146; /* Day slot hover effect */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content cells for the schedule */
+.schedule-cell {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.schedule-cell:hover {
+  background-color: #ebeedf; /* Subtle hover effect for cells */
+  transform: scale(1.02);
+}
+
+/* Button styling */
+button {
+  border-radius: 6px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.75em 1.25em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ccd5ae; /* Use tea_green-500 */
+  color: #2d331a; /* Dark shade from palette */
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+button:hover {
+  background-color: #b3c146; /* Use beige-300 */
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid #d4a373; /* Use buff-500 */
+}
+
+/* Responsive adjustment for screens */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #79842c; /* Another shade from palette */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ebeedf; /* Light shade of tea_green */
   }
 }

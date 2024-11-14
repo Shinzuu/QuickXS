@@ -1,35 +1,28 @@
 <!-- src/App.svelte -->
+<script>
+  import Routine from './routes/Routine.svelte';
+  let currentRoute = 'home';
 
-<style>
-  header {
-    background-color: theme('colors.primary'); /* Use custom color */
-    color: theme('colors.base');
+  function navigate(route) {
+    currentRoute = route;
   }
-  
-  nav a {
-    color: theme('colors.accent');
-  }
-  
-  /* Mobile adjustments */
-  @media (max-width: 640px) {
-    .nav-item {
-      display: block;
-      margin: 8px 0;
-    }
-  }
-</style>
+</script>
 
-<header class="p-4 shadow-md fixed w-full top-0">
-  <nav class="flex justify-between">
-    <h1 class="text-lg font-semibold text-neutral">My App</h1>
-    <div class="space-x-4 flex">
-      <a href="/" class="nav-item text-accent">Home</a>
-      <a href="/routine" class="nav-item text-accent">Routine</a>
-      <a href="/about" class="nav-item text-accent">About</a>
+<div class="app-wrapper">
+  <nav class="p-4 bg-beige text-tea_green-100 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-tea_green-300">My Svelte Project</h1>
+    <div>
+      <button on:click={() => navigate('home')} class="mr-4 text-tea_green-100">Home</button>
+      <button on:click={() => navigate('routine')} class="text-tea_green-100">Routine</button>
     </div>
   </nav>
-</header>
 
-<main class="pt-16 p-4 bg-neutral min-h-screen">
-  <slot />
-</main>
+  <main class="p-4 bg-beige text-tea_green-100">
+    {#if currentRoute === 'home'}
+      <h1 class="text-2xl font-bold text-tea_green-300">Welcome to My Svelte Project</h1>
+      <p class="text-buff-500">Click "Routine" to view the class schedule.</p>
+    {:else if currentRoute === 'routine'}
+      <Routine />
+    {/if}
+  </main>
+</div>
