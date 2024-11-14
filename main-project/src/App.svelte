@@ -1,28 +1,35 @@
-<script>
-  // Define an array of colors using your custom palette
-  const colors = [
-    { name: "Tea Green", color: "bg-tea_green-500" },
-    { name: "Beige", color: "bg-beige-500" },
-    { name: "Cornsilk", color: "bg-cornsilk-500" },
-    { name: "Papaya Whip", color: "bg-papaya_whip-500" },
-    { name: "Buff", color: "bg-buff-500" }
-  ];
-</script>
-
-<main class="p-8 space-y-4">
-  <h1 class="text-2xl font-bold">Color Palette Showcase</h1>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    {#each colors as { name, color }}
-      <div class={`h-24 ${color} flex items-center justify-center text-white font-semibold`}>
-        {name}
-      </div>
-    {/each}
-  </div>
-</main>
+<!-- src/App.svelte -->
 
 <style>
-  /* Add some default styling if desired */
-  main {
-    font-family: sans-serif;
+  header {
+    background-color: theme('colors.primary'); /* Use custom color */
+    color: theme('colors.base');
+  }
+  
+  nav a {
+    color: theme('colors.accent');
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .nav-item {
+      display: block;
+      margin: 8px 0;
+    }
   }
 </style>
+
+<header class="p-4 shadow-md fixed w-full top-0">
+  <nav class="flex justify-between">
+    <h1 class="text-lg font-semibold text-neutral">My App</h1>
+    <div class="space-x-4 flex">
+      <a href="/" class="nav-item text-accent">Home</a>
+      <a href="/routine" class="nav-item text-accent">Routine</a>
+      <a href="/about" class="nav-item text-accent">About</a>
+    </div>
+  </nav>
+</header>
+
+<main class="pt-16 p-4 bg-neutral min-h-screen">
+  <slot />
+</main>

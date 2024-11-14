@@ -1,0 +1,19 @@
+{
+    "schedule": [
+      {
+        "day": "Saturday",
+        "classes": [
+          { "time": "08:30", "subject": "Math", "teacher": "T.A.", "classroom": "Room 101", "duration": 1.5 },
+          { "time": "10:00", "subject": "Physics", "teacher": "P.B.", "classroom": "Room 102", "duration": 3 }
+        ]
+      },
+      {
+        "day": "Sunday",
+        "classes": [
+          { "time": "08:30", "subject": "Chemistry", "teacher": "C.L.", "classroom": "Room 103", "duration": 1.5 },
+          { "time": "11:30", "subject": "Biology", "teacher": "B.M.", "classroom": "Room 104", "duration": 1.5 }
+        ]
+      }
+    ]
+  }
+  
