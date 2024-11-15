@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d9c7c62-0189-463d-b238-fe33986e2814/deploy-status)](https://app.netlify.com/sites/quickxs/deploys)
 # University Semester Portal
 
 This web application provides students with easy access to key information for the current semester at my university. The site displays details about class routines, upcoming events, downloadable documents, useful links, and more. It is built with Svelte and TailwindCSS for a fast, responsive user experience.
