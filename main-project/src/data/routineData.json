@@ -1,0 +1,43 @@
+{
+    "schedule": [
+      {
+        "day": "Saturday",
+        "classes": [
+          { "time": "08:30", "subject": "AI", "teacher": "AD", "classroom": "611", "duration": 85 },
+          { "time": "11:00", "subject": "COA", "teacher": "TDM", "classroom": "611", "duration": 85 },
+          { "time": "12:15", "subject": "ISD", "teacher": "DD", "classroom": "611", "duration": 85 }
+        ]
+      },
+      {
+        "day": "Sunday",
+        "classes": [
+          { "time": "08:30", "subject": "OSL", "teacher": "SRM", "classroom": "606", "duration": 85 },
+          { "time": "09:45", "subject": "ISD", "teacher": "DD", "classroom": "510", "duration": 85 },
+          { "time": "11:00", "subject": "COA", "teacher": "TDM", "classroom": "510", "duration": 85 }
+        ]
+      },
+      {
+        "day": "Monday",
+        "classes": [
+          { "time": "02:30", "subject": "OS", "teacher": "SRM", "classroom": "510", "duration": 85 },
+          { "time": "03:45", "subject": "STP", "teacher": "GH", "classroom": "611", "duration": 85 }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "classes": [
+          { "time": "11:00", "subject": "MAD", "teacher": "AM", "classroom": "604", "duration": 150 },
+          { "time": "02:30", "subject": "AIL", "teacher": "AD", "classroom": "601", "duration": 150 }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "classes": [
+          { "time": "09:45", "subject": "OS", "teacher": "SRM", "classroom": "405", "duration": 85 },
+          { "time": "12:15", "subject": "AI", "teacher": "AD", "classroom": "409", "duration": 85 },
+          { "time": "02:30", "subject": "STP", "teacher": "GH", "classroom": "510", "duration": 85 }
+        ]
+      }
+    ]
+  }
+  
