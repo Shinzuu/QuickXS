@@ -1,129 +1,51 @@
 [
     {
       "date": "2024-11-15",
-      "time": "10:00 AM - 12:00 PM",
-      "name": "One",
-      "info": "Test: Upcoming event. Checks future event handling and rendering."
-    },
-    {
-      "date": "2024-11-20",
-      "time": "2:00 PM - 4:00 PM",
-      "name": "Two",
-      "info": "Test: Event in the near future. Ensure sorting works for upcoming events."
-    },
-    {
-      "date": "2024-11-10",
-      "time": "3:00 PM - 4:30 PM",
-      "name": "Three",
-      "info": "Test: Past event. Ensures expired events are shown at the bottom with reduced opacity."
-    },
-    {
-      "date": "2024-11-12",
-      "time": "5:00 PM - 6:30 PM",
-      "name": "Four",
-      "info": "Test: Mid-term event. Ensures events are properly sorted by date and time."
-    },
-    {
-      "date": "2024-11-25",
-      "time": "9:00 AM - 11:00 AM",
-      "name": "Five",
-      "info": "Test: Far future event. Verifies proper display of distant events in the table."
-    },
-    {
-      "date": "2024-11-13",
-      "time": "10:00 AM - 11:30 AM",
-      "name": "Six",
-      "info": "Test: Upcoming event. Verifies future event is listed above past events."
-    },
-    {
-      "date": "2024-11-08",
-      "time": "8:00 AM - 9:00 AM",
-      "name": "Seven",
-      "info": "Test: Past event. Checks how the system handles events that occurred in the past."
-    },
-    {
-      "date": "2024-11-18",
-      "time": "1:00 PM - 3:00 PM",
-      "name": "Eight",
-      "info": "Test: Sorting functionality. Confirms sorting of upcoming events based on date and time."
-    },
-    {
-      "date": "2024-11-30",
-      "time": "4:00 PM - 6:00 PM",
-      "name": "Nine",
-      "info": "Test: Long-term future event. Verifies events far in the future are correctly ordered."
-    },
-    {
-      "date": "2024-11-05",
-      "time": "2:00 PM - 4:00 PM",
-      "name": "Ten",
-      "info": "Test: Event with no info. Ensures events without a description are displayed correctly."
-    },
-    {
-      "date": "2024-11-14",
-      "time": "11:00 AM - 12:30 PM",
-      "name": "Eleven",
-      "info": "Test: Event with multiple fields. Verifies handling of various time slots and info fields."
-    },
-    {
-      "date": "2024-12-01",
-      "time": "10:00 AM - 12:00 PM",
-      "name": "Twelve",
-      "info": "Test: Event in December. Verifies events in different months are sorted properly."
-    },
-    {
-      "date": "2024-11-09",
-      "time": "3:00 PM - 5:00 PM",
-      "name": "Thirteen",
-      "info": "Test: Weekend event. Verifies sorting and display of weekend events correctly."
-    },
-    {
-      "date": "2024-11-07",
-      "time": "12:00 PM - 2:00 PM",
-      "name": "Fourteen",
-      "info": "Test: Event in the afternoon. Ensures events at different times are sorted properly."
-    },
-    {
-      "date": "2024-11-11",
-      "time": "4:00 PM - 6:00 PM",
-      "name": "Fifteen",
-      "info": "Test: Event with generic description. Verifies handling of event info field."
-    },
-    {
-      "date": "2024-11-21",
-      "time": "7:00 PM - 9:00 PM",
-      "name": "Sixteen",
-      "info": "Test: Evening event. Verifies sorting of events by time of day."
-    },
-    {
-      "date": "2024-11-19",
-      "time": "10:00 AM - 12:00 PM",
-      "name": "Seventeen",
-      "info": "Test: Early morning event. Verifies sorting and display of events by time."
-    },
-    {
-      "date": "2024-11-26",
-      "time": "8:30 AM - 10:30 AM",
-      "name": "Eighteen",
-      "info": "Test: Event with short duration. Verifies correct handling of events with different lengths."
-    },
-    {
-      "date": "2024-11-04",
-      "time": "10:00 AM - 12:00 PM",
-      "name": "Nineteen",
-      "info": "Test: Event that already passed. Verifies correct styling for past events (semi-transparent)."
+      "time": "08:30 AM",
+      "name": "Semester start",
+      "info": "Fall 2024 semester starting day"
     },
     {
       "date": "2024-11-16",
-      "time": "5:30 PM - 7:30 PM",
-      "name": "Twenty",
-      "info": "Test: Evening event. Verifies the sorting of evening events after other events."
+      "time": "08:30 AM",
+      "name": "ONE",
+      "info": "test 1"
     },
     {
-      "date": "2024-11-15",
-      "time": "08:30 PM",
-      "name": "Semester start",
-      "info": "Fall 2024 semester starting day"
+      "date": "2024-11-17",
+      "time": "08:30 AM",
+      "name": "TWO",
+      "info": "test 2"
+    },
+    {
+      "date": "2024-11-18",
+      "time": "08:30 AM",
+      "name": "THREE",
+      "info": "test 3"
+    },
+    {
+      "date": "2024-11-19",
+      "time": "08:30 AM",
+      "name": "FOUR",
+      "info": "test 4"
+    },
+    {
+      "date": "2024-11-20",
+      "time": "08:30 AM",
+      "name": "FIVE",
+      "info": "test 5"
+    },
+    {
+      "date": "2024-11-17",
+      "time": "08:30 AM",
+      "name": "SPECIAL",
+      "info": "test 6"
+    },
+    {
+      "date": "2024-10-18",
+      "time": "08:30 AM",
+      "name": "SPECIAL2",
+      "info": "test 7"
     }
-  ]
+    ]
   
