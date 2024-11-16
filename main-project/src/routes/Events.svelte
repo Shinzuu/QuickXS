@@ -15,6 +15,7 @@
     return events.sort((a, b) => {
       const timeA = new Date(`${a.date} ${a.time.split(" - ")[0]}`);
       const timeB = new Date(`${b.date} ${b.time.split(" - ")[0]}`);
+      // @ts-ignore
       return timeA - timeB; // Sort by closest upcoming event
     });
   }
@@ -25,6 +26,7 @@
     let eventEndTime = new Date(`${event.date} ${event.time.split(" - ")[1]}`);
     
     // Handle edge cases where time might be incorrectly formatted
+    // @ts-ignore
     if (isNaN(eventEndTime)) {
       eventEndTime = currentTime; // If the event time is invalid, treat it as past
     }
