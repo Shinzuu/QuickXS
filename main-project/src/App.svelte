@@ -2,8 +2,8 @@
   import Routine from './routes/Routine.svelte';
   import Events from './routes/Events.svelte';
   import Links from './routes/Links.svelte';
+  import Main from './Main.svelte';  // Import the Main component
   import Footer from './Footer.svelte'; 
-
 
   let currentRoute = 'home';
   let isMenuOpen = false;
@@ -102,8 +102,7 @@
   <!-- Main Content -->
   <main class="p-4 bg-beige text-tea_green-100">
     {#if currentRoute === 'home'}
-      <h1 class="text-2xl font-bold text-tea_green-300">Next Classes</h1>
-      <p class="text-buff-500">Upcoming Events</p>
+      <Main />  <!-- Display Main component for home route -->
     {:else if currentRoute === 'routine'}
       <Routine />
     {:else if currentRoute === 'events'}
@@ -113,4 +112,5 @@
     {/if}
   </main>
 </div>
-<Footer/>
+
+<Footer />

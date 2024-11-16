@@ -120,10 +120,10 @@
       "info": "Test: Evening event. Verifies the sorting of evening events after other events."
     },
     {
-      "date": "2024-11-23",
-      "time": "2:00 PM - 4:00 PM",
-      "name": "Twenty-One",
-      "info": "Test: Team event. Verifies events with specific group activities."
+      "date": "2024-11-15",
+      "time": "08:30 PM",
+      "name": "Semester start",
+      "info": "Fall 2024 semester starting day"
     }
   ]
   
