@@ -2,6 +2,8 @@
   import Routine from './routes/Routine.svelte';
   import Events from './routes/Events.svelte';
   import Links from './routes/Links.svelte';
+  import Footer from './Footer.svelte'; 
+
 
   let currentRoute = 'home';
   let isMenuOpen = false;
@@ -111,3 +113,4 @@
     {/if}
   </main>
 </div>
+<Footer/>
