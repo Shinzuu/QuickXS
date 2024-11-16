@@ -1,0 +1,51 @@
+[
+    {
+      "date": "2024-11-15",
+      "time": "08:30 AM",
+      "name": "Semester start",
+      "info": "Fall 2024 semester starting day"
+    },
+    {
+      "date": "2024-11-16",
+      "time": "08:30 AM",
+      "name": "ONE",
+      "info": "test 1"
+    },
+    {
+      "date": "2024-11-17",
+      "time": "08:30 AM",
+      "name": "TWO",
+      "info": "test 2"
+    },
+    {
+      "date": "2024-11-18",
+      "time": "08:30 AM",
+      "name": "THREE",
+      "info": "test 3"
+    },
+    {
+      "date": "2024-11-19",
+      "time": "08:30 AM",
+      "name": "FOUR",
+      "info": "test 4"
+    },
+    {
+      "date": "2024-11-20",
+      "time": "08:30 AM",
+      "name": "FIVE",
+      "info": "test 5"
+    },
+    {
+      "date": "2024-11-17",
+      "time": "08:30 AM",
+      "name": "SPECIAL",
+      "info": "test 6"
+    },
+    {
+      "date": "2024-10-18",
+      "time": "08:30 AM",
+      "name": "SPECIAL2",
+      "info": "test 7"
+    }
+    ]
+  
