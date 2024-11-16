@@ -4,136 +4,151 @@
 
   let events = [];
 
-  // Helper function to get the current time in a comparable format
   function getCurrentTime() {
     return new Date();
   }
 
-  // Sort function to order events by nearest to the current time
   function sortEvents(events) {
     const currentTime = getCurrentTime();
-    
     return events.sort((a, b) => {
       const timeA = new Date(`${a.date} ${a.time.split(" - ")[0]}`);
       const timeB = new Date(`${b.date} ${b.time.split(" - ")[0]}`);
-      
-      // Sort by the closest upcoming event
       // @ts-ignore
-      return timeA - timeB;
+      return timeA - timeB; // Sort by closest upcoming
     });
   }
 
-  // Format event for checking if it's in the past
   function isPastEvent(event) {
     const eventTime = new Date(`${event.date} ${event.time.split(" - ")[1]}`);
     return eventTime < getCurrentTime();
   }
 
-  // Load events and sort them
   onMount(() => {
     events = sortEvents(eventsData);
   });
 </script>
 
 <style>
-/* Event row styling */
-.event-row {
-  padding: 0.75rem;
-  border-bottom: 1px solid #ccd5ae; /* Tea green border */
+/* Remove light green background */
+.events-section {
+  padding: 2rem 1rem;
+}
+
+/* White container with shadow */
+.event-table {
+  background-color: #ffffff; /* White center */
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
   transition: all 0.3s ease;
 }
 
-/* Styling for past events */
+@media (max-width: 768px) {
+  .event-table {
+    max-width: 95%;
+  }
+}
+
+/* Scrollable table wrapper */
+.scrollable-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Ensures table scrolls on small screens */
+}
+
+th, td {
+  padding: 0.75rem; /* Reduced padding for smaller rows */
+  text-align: left;
+  font-size: 0.9rem; /* Adjust font size for smaller screens */
+}
+
+th {
+  background-color: #ccd5ae; /* Tea green */
+  color: #2d331a;
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  th, td {
+    padding: 0.5rem; /* Reduce padding further for mobile */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+/* Styling for event rows */
+.event-row {
+  border-bottom: 1px solid #ccd5ae;
+  transition: all 0.3s ease;
+}
+
+/* Past events */
 .past-event {
-  background-color: rgba(0, 0, 0, 0.1); /* Subtle dark background for past events */
-  filter: blur(1px); /* Blur effect for past events */
-  color: #aaa; /* Dimmed text color */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Dark shadow for depth */
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle gray */
+  color: #aaa;
+  filter: blur(0.8px);
+  font-style: italic;
 }
 
 .past-event:hover {
   filter: none; /* Remove blur on hover */
-  background-color: rgba(0, 0, 0, 0.2); /* Darken background on hover */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for upcoming events */
+/* Upcoming events */
 .upcoming-event {
-  background-color: #f3f9f3; /* Light green background */
+  background-color: #f3f9f3; /* Light green */
 }
 
 .upcoming-event:nth-child(even) {
-  background-color: #e0f2e0; /* Slightly darker green for alternating rows */
+  background-color: #e0f2e0; /* Alternating row color */
 }
 
 .upcoming-event:hover {
-  background-color: #d1e8d1; /* Slightly lighter green on hover */
-}
-
-/* Title styles for the event table */
-.event-title {
-  font-size: 2.5rem; /* Adjust size for consistency with Routine */
-  font-weight: bold;
-  color: #5b6635; /* Dark green for the title */
-  margin-bottom: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.event-title:hover {
-  color: #b3c146; /* Hover effect */
-}
-
-/* Scrollable container for mobile */
-.scrollable-container {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px; /* Set minimum width for responsiveness */
-}
-
-th, td {
-  padding: 1rem;
-  text-align: left;
-}
-
-th {
-  background-color: #ccd5ae; /* Tea green for header */
-  color: #2d331a;
-  font-weight: 600;
+  background-color: #d1e8d1; /* Slightly lighter green */
 }
 </style>
 
-<div class="event-table">
-<!-- Title Section -->
-<h2 class="event-title text-tea_green-300">Upcoming Events</h2>
+<div class="events-section">
+  <div class="event-table">
+    <!-- Title Section -->
+    <h2 class="event-title">Upcoming Events</h2>
 
-<!-- Scrollable Wrapper -->
-<div class="scrollable-container">
-  <table class="w-full bg-beige border border-tea_green-200 shadow-lg">
-    <thead>
-      <tr class="bg-tea_green-400 text-beige-100">
-        <th class="p-2 border-b-2 border-tea_green-500 text-center">#</th>
-        <th class="p-2 border-b-2 border-tea_green-500 text-center">Date</th>
-        <th class="p-2 border-b-2 border-tea_green-500 text-center">Time</th>
-        <th class="p-2 border-b-2 border-tea_green-500 text-center">Name</th>
-        <th class="p-2 border-b-2 border-tea_green-500 text-center">Info</th>
-      </tr>
-    </thead>
-    <tbody>
-      {#each events as event, index (event.name)}
-        <tr class="event-row {isPastEvent(event) ? 'past-event' : 'upcoming-event'}">
-          <td>{index + 1}</td>
-          <td>{event.date}</td>
-          <td>{event.time}</td>
-          <td>{event.name}</td>
-          <td>{event.info || "No information available"}</td>
-        </tr>
-      {/each}
-    </tbody>
-  </table>
-</div>
+    <!-- Scrollable Wrapper -->
+    <div class="scrollable-container">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each events as event, index (event.name)}
+            <tr class="event-row {isPastEvent(event) ? 'past-event' : 'upcoming-event'}">
+              <td>{index + 1}</td>
+              <td>{event.date}</td>
+              <td>{event.time}</td>
+              <td>{event.name}</td>
+              <td>{event.info || "No information available"}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
