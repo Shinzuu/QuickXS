@@ -112,6 +112,7 @@
         return { ...event, eventDate };
       })
       .filter((event) => event.eventDate > currentTime)
+      // @ts-ignore
       .sort((a, b) => a.eventDate - b.eventDate);
 
     return sortedEvents.slice(0, 3);

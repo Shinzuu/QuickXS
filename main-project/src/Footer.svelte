@@ -9,7 +9,7 @@
     </a>
   
     <!-- Source Code Link -->
-    <a href="https://github.com/your-repository-url" target="_blank" class="footer-link">
+    <a href="https://github.com/Shinzuu/QuickXS" target="_blank" class="footer-link">
       <i class="fas fa-code"></i>
     </a>
   </footer>
