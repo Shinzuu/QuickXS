@@ -26,7 +26,7 @@
       {
         "day": "Tuesday",
         "classes": [
-          { "time": "11:00", "subject": "MAD", "teacher": "AM", "classroom": "604", "duration": 150 },
+          { "time": "11:00", "subject": "MAD", "teacher": "AM", "classroom": "904", "duration": 150 },
           { "time": "02:30", "subject": "AIL", "teacher": "AD", "classroom": "601", "duration": 150 }
         ]
       },
