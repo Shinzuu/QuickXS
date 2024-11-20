@@ -1,6 +1,6 @@
 <script>
   import routineData from "./data/routineData.json";
-  import eventsData from "./data/eventsData.json"; 
+  import eventsData from "./data/eventsData.json";
 
   const daysOfWeek = [
     "Monday",
@@ -61,6 +61,24 @@
     return { hours, minutes };
   }
 
+  function getNextScheduledDay(currentDay) {
+    // Get a list of days with classes
+    const scheduledDays = routineData.schedule.map((d) => d.day);
+
+    // Find the next scheduled day in a cyclic manner
+    const currentIndex = daysOfWeek.indexOf(currentDay);
+    for (let i = 1; i <= daysOfWeek.length; i++) {
+      const nextIndex = (currentIndex + i) % daysOfWeek.length;
+      const nextDay = daysOfWeek[nextIndex];
+      if (scheduledDays.includes(nextDay)) {
+        return nextDay;
+      }
+    }
+
+    // Fallback (shouldn't occur if data is valid)
+    return currentDay;
+  }
+
   function getDayToDisplay() {
     const currentHour = currentTime.getHours();
     const currentMinute = currentTime.getMinutes();
@@ -70,16 +88,10 @@
       currentHour > endOfDay.hours ||
       (currentHour === endOfDay.hours && currentMinute >= endOfDay.minutes)
     ) {
-      return getNextDay(currentDay);
+      return getNextScheduledDay(currentDay);
     }
 
     return currentDay;
-  }
-
-  function getNextDay(currentDay) {
-    const currentIndex = daysOfWeek.indexOf(currentDay);
-    const nextIndex = (currentIndex + 1) % daysOfWeek.length;
-    return daysOfWeek[nextIndex];
   }
 
   function findClassesForDay(day) {
