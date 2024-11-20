@@ -33,7 +33,7 @@
       {
         "day": "Wednesday",
         "classes": [
-          { "time": "11:00?", "subject": "OS", "teacher": "SRM", "classroom": "411?", "duration": 85 },
+          { "time": "11:00", "subject": "OS", "teacher": "SRM", "classroom": "411", "duration": 85 },
           { "time": "12:15", "subject": "AI", "teacher": "AD", "classroom": "409", "duration": 85 },
           { "time": "02:30", "subject": "STP", "teacher": "GH", "classroom": "510", "duration": 85 }
         ]
