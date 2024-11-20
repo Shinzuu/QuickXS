@@ -11,7 +11,7 @@
     OS: "fas fa-microchip", // Operating Systems
     OSL: "fas fa-server", // Operating Systems Laboratory
     COA: "fas fa-cogs", // Computer Organization & Architecture
-    STP: "fas fa-chart-line", // Statistics and Probability
+    SAP: "fas fa-chart-line", // Statistics and Probability
   };
 
   const lecturerIcons = {
@@ -20,7 +20,7 @@
     "Avisheak Das (AD)": "fas fa-chalkboard-teacher",
     "Shatabdi Roy Moon (SRM)": "fas fa-chalkboard-teacher",
     "Unknown (GH)": "fas fa-user-secret",
-    "Unknown (AM)": "fas fa-user-secret",
+    "Asif Mohammad (AM)": "fas fa-chalkboard-teacher",
   };
 
   function findClass(day, time) {

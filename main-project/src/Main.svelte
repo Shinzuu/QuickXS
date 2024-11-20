@@ -20,7 +20,7 @@
     OS: "Operating Systems",
     OSL: "Operating Systems Laboratory",
     COA: "Computer Organization & Architecture",
-    STP: "Statistics and Probability",
+    SAP: "Statistics and Probability",
   };
 
   const teacherFullNames = {
@@ -40,7 +40,7 @@
     OS: "fas fa-microchip",
     OSL: "fas fa-server",
     COA: "fas fa-cogs",
-    STP: "fas fa-chart-line",
+    SAP: "fas fa-chart-line",
   };
 
   const currentTime = new Date();
