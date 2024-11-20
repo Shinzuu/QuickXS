@@ -28,8 +28,8 @@
     DD: "Dhrubajyoti Das",
     AD: "Avisheak Das",
     SRM: "Shatabdi Roy Moon",
-    GH: "Unknown Teacher (GH)",
-    AM: "Unknown Teacher (AM)",
+    GH: "Dr. MD. GH",
+    AM: "Asif Mohammad",
   };
 
   const subjectIcons = {
