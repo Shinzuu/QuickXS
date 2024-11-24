@@ -11,7 +11,7 @@
         "day": "Sunday",
         "classes": [
           { "time": "08:30", "subject": "OSL", "teacher": "SRM", "classroom": "606", "duration": 85 },
-          { "time": "09:45", "subject": "ISD", "teacher": "DD", "classDayroom": "510", "duration": 85 },
+          { "time": "09:45", "subject": "ISD", "teacher": "DD", "classroom": "510", "duration": 85 },
           { "time": "11:00", "subject": "COA", "teacher": "TDM", "classroom": "510", "duration": 85 },
           { "time": "12:15", "subject": "AI", "teacher": "AD", "classroom": "510", "duration": 85 }
         ]
