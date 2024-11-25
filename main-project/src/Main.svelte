@@ -28,7 +28,7 @@
     DD: "Dhrubajyoti Das",
     AD: "Avisheak Das",
     SRM: "Shatabdi Roy Moon",
-    GH: "Dr. MD. GH",
+    GH: "Dr. MD. Golam Hafez",
     AM: "Asif Mohammad",
   };
 
