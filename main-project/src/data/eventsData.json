@@ -10,5 +10,11 @@
     "time": "11:00 AM",
     "name": "OS CT 1",
     "info": "Chapter 1 & 2"
+  },
+  {
+    "date": "2024-12-10",
+    "time": "11:00 AM",
+    "name": "MAD Performance Test",
+    "info": "Basic UI component of jetpack compose "
   }
 ]
