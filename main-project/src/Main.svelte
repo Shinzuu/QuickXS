@@ -133,6 +133,7 @@
   function calculateCountdown(eventDate) {
     const now = new Date();
     const targetDate = new Date(eventDate);
+    // @ts-ignore
     const diff = targetDate - now;
 
     if (diff <= 0) {
