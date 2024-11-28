@@ -1,6 +1,7 @@
 <script>
   import routineData from "./data/routineData.json";
   import eventsData from "./data/eventsData.json";
+  import { onMount } from "svelte";
 
   const daysOfWeek = [
     "Monday",
@@ -62,10 +63,8 @@
   }
 
   function getNextScheduledDay(currentDay) {
-    // Get a list of days with classes
     const scheduledDays = routineData.schedule.map((d) => d.day);
 
-    // Find the next scheduled day in a cyclic manner
     const currentIndex = daysOfWeek.indexOf(currentDay);
     for (let i = 1; i <= daysOfWeek.length; i++) {
       const nextIndex = (currentIndex + i) % daysOfWeek.length;
@@ -75,7 +74,6 @@
       }
     }
 
-    // Fallback (shouldn't occur if data is valid)
     return currentDay;
   }
 
@@ -129,6 +127,38 @@
 
     return sortedEvents.slice(0, 3);
   }
+
+  let countdowns = {};
+
+  function calculateCountdown(eventDate) {
+    const now = new Date();
+    const targetDate = new Date(eventDate);
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  }
+
+  function updateCountdowns() {
+    upcomingEvents.forEach((event) => {
+      countdowns[event.name] = calculateCountdown(event.eventDate);
+    });
+  }
+
+  onMount(() => {
+    updateCountdowns();
+    const interval = setInterval(updateCountdowns, 1000);
+
+    return () => clearInterval(interval);
+  });
 
   const dayToDisplay = getDayToDisplay();
   const classesForDay = findClassesForDay(dayToDisplay);
@@ -190,6 +220,14 @@
             <strong>{event.name}</strong><br />
             <em>{event.date} {event.time}</em><br />
             <p>{event.info}</p>
+            <div class="text-gray-500 text-sm mt-2">
+              {#if countdowns[event.name]}
+                {countdowns[event.name].days}d 
+                {countdowns[event.name].hours}h 
+                {countdowns[event.name].minutes}m 
+                {countdowns[event.name].seconds}s remaining
+              {/if}
+            </div>
           </li>
         {/each}
       </ul>
@@ -223,17 +261,6 @@
 
   .table-auto td,
   .table-auto th {
-    padding: 10px 12px;
-  }
-
-  i {
-    margin-right: 8px;
-  }
-
-  @media (max-width: 640px) {
-    .table-auto td,
-    .table-auto th {
-      padding: 8px;
-    }
+    padding: 0.5rem 0.75rem;
   }
 </style>
