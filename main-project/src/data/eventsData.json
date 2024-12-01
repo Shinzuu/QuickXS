@@ -22,5 +22,11 @@
     "time": "09:45 AM",
     "name": "ISD CT 1",
     "info": "Module 1 & 2"
+  },
+  {
+    "date":"2024-12-04",
+    "time":"12:15 AM",
+    "name":"AI CT 1",
+    "info":"uncertain"
   }
 ]
