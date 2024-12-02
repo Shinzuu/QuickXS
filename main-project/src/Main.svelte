@@ -213,7 +213,7 @@
   <div
     class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-1/2"
   >
-    <h2 class="text-xl font-bold mb-4">Upcoming Events</h2>
+    <h2 class="text-xl font-bold mb-4">Upcoming Events(3 Most Recent)</h2>
     {#if upcomingEvents.length > 0}
       <ul>
         {#each upcomingEvents as event}
