@@ -28,5 +28,11 @@
     "time":"12:15 AM",
     "name":"AI CT 1",
     "info":"AI agent, Task Environment, Environment Type, Uninformed and Informed Search Techniques, Local Search, Constraint Satisfaction Problem"
+  },
+  {
+    "date":"2024-12-03",
+    "time":"02:30 PM",
+    "name":"AIL Performance 1",
+    "info":"Performance Evaluation on Python Introduction and Machine Learning tools"
   }
 ]
