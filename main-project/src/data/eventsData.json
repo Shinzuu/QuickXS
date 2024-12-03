@@ -6,8 +6,8 @@
     "info": "Fall 2024 semester starting day"
   },
   {
-    "date": "2024-12-04",
-    "time": "11:00 AM",
+    "date": "2024-12-09",
+    "time": "02:30 PM",
     "name": "OS CT 1",
     "info": "Chapter 1 & 2"
   },
@@ -40,5 +40,11 @@
     "time":"02:30 PM",
     "name":"Project Proposal (AI & MAD)",
     "info":"Initial Project Proposal Submission (about, target problem, flow chart, design, workflow/time-frame )"
+  },
+  {
+    "date":"2024-12-09",
+    "time":"03:45 PM",
+    "name":"SAP CT 1",
+    "info":"Last 2 given slides"
   }
 ]
