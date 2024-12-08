@@ -46,5 +46,11 @@
     "time":"03:45 PM",
     "name":"SAP CT 1",
     "info":"Last 2 given slides"
+  },
+  {
+    "date":"2024-12-22",
+    "time":"08:30 AM",
+    "name":"OS performance 1",
+    "info":"Basic file operations in BASH (create, read, write, copy, delete, rename, move, sorting, filtering , searching and etc)"
   }
 ]
