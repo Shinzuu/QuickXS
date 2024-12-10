@@ -7,7 +7,7 @@
   },
   {
     "date": "2024-12-11",
-    "time": "02:30 PM",
+    "time": "11:00 PM",
     "name": "OS CT 1",
     "info": "Chapter 1 & 2"
   },
@@ -38,12 +38,12 @@
   {
     "date":"2024-12-10",
     "time":"02:30 PM",
-    "name":"Project Proposal (AI & MAD)",
+    "name":"Project Proposal AI",
     "info":"Initial Project Proposal Submission (about, target problem, flow chart, design, workflow/time-frame )"
   },
   {
     "date":"2024-12-11",
-    "time":"03:45 PM",
+    "time":"02:30 PM",
     "name":"SAP CT 1",
     "info":"Last 2 given slides"
   },
@@ -58,5 +58,11 @@
     "time":"11:00 AM",
     "name":"COA CT 1",
     "info":"Patterson's reference book chapter 2 & 4"
+  },
+  {
+    "date":"2024-12-17",
+    "time":"11:00 PM",
+    "name":"Project Proposal MAD",
+    "info":"Initial Project Proposal Submission "
   }
 ]
