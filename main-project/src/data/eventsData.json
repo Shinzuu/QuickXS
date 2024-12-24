@@ -85,8 +85,15 @@
   },
   {
     "date":"2025-01-15",
-    "time":"02:00 pM",
+    "time":"02:00 PM",
     "name":"MID ends",
     "info":"Routine have n't been provided"
+  },{
+    {
+      "date":"2025-01-05",
+      "time":"11:59 PM",
+      "name":"PAYMENT DUE",
+      "info":"Half installment"
+    }
   }
 ]
