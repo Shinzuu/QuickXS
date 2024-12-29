@@ -72,7 +72,7 @@
     "info":"from lesson plan ? Not sure" 
   },
   {
-    "date":"2024-12-29",
+    "date":"2024-12-30",
     "time":"03:45 PM",
     "name":"SAP CT 2",
     "info":"lecture2.pdf mean/std deviation and variance "
@@ -94,5 +94,11 @@
     "time":"11:59 PM",
     "name":"PAYMENT DUE",
     "info":"Half installment"
+  },
+  {
+    "date":"2025-01-08",
+    "time":"12:15 PM",
+    "name":"AI CT 2",
+    "info":"none given"
   }
 ]
