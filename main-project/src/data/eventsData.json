@@ -100,5 +100,11 @@
     "time":"12:15 PM",
     "name":"AI CT 2",
     "info":"From lesson plan : Game Theory, Propositional Logic, Predicate Logic , First Order Logic (8.9-8.11 exercise solve), Planning"
+  },
+  {
+    "date":"2025-01-28",
+    "time":"02:30 PM",
+    "name":"MAD Performance 2",
+    "info":"Firebase data input/change/listing with basic UI "
   }
 ]
