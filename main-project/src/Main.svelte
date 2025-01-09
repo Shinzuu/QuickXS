@@ -265,12 +265,10 @@
           <td class="px-4 py-2">mod 1: chap 1: Information And Management</td>
         </tr>
         <tr class="border-b border-gray-200">
-          <td class="px-4 py-2"
-            >mod 2: chap 3: Information Systems Analysis Overview n</td
-          >
+          <td class="px-4 py-2">mod 2: chap 3: Information Systems Analysis Overview (Software Development Life Cycle)</td>
         </tr>
         <tr class="border-b border-gray-200">
-          <td class="px-4 py-2">mod 3: chap 4: Information Gathering</td>
+          <td class="px-4 py-2">mod 3: chap 4: Information Gathering (System Requirement Specification)</td>
         </tr>
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2">mod 4: chap 6: Feasibility Analysis</td>
@@ -399,7 +397,9 @@
           <td class="px-4 py-2">CH3 : Processes</td>
         </tr>
         <tr class="border-b border-gray-200">
-          <td class="px-4 py-2">CH3 : Precess states , blocks (control and such) with diagrams</td>
+          <td class="px-4 py-2"
+            >CH3 : Precess states , blocks (control and such) with diagrams</td
+          >
         </tr>
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2">CH3 : Context switching</td>
