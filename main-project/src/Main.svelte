@@ -399,7 +399,7 @@
           <td class="px-4 py-2">CH3 : Processes</td>
         </tr>
         <tr class="border-b border-gray-200">
-          <td class="px-4 py-2">CH3 : Precess states , blocks with diagrams</td>
+          <td class="px-4 py-2">CH3 : Precess states , blocks (control and such) with diagrams</td>
         </tr>
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2">CH3 : Context switching</td>
