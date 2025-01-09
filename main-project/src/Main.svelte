@@ -46,7 +46,9 @@
 
   const currentTime = new Date();
   const currentDay =
-    daysOfWeek[(currentTime.getDay() - 1 + daysOfWeek.length) % daysOfWeek.length];
+    daysOfWeek[
+      (currentTime.getDay() - 1 + daysOfWeek.length) % daysOfWeek.length
+    ];
 
   function parseTimeTo24Hour(timeStr) {
     const [time, period] = timeStr.split(" ");
@@ -213,7 +215,7 @@
   <div
     class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-1/2"
   >
-    <h2 class="text-xl font-bold mb-4">Upcoming Events(3 Most Recent)</h2>
+    <h2 class="text-xl font-bold mb-4">Upcoming Events (3 Most Recent)</h2>
     {#if upcomingEvents.length > 0}
       <ul>
         {#each upcomingEvents as event}
@@ -223,9 +225,9 @@
             <p>{event.info}</p>
             <div class="text-gray-500 text-sm mt-2">
               {#if countdowns[event.name]}
-                {countdowns[event.name].days}d 
-                {countdowns[event.name].hours}h 
-                {countdowns[event.name].minutes}m 
+                {countdowns[event.name].days}d
+                {countdowns[event.name].hours}h
+                {countdowns[event.name].minutes}m
                 {countdowns[event.name].seconds}s remaining
               {/if}
             </div>
@@ -235,6 +237,202 @@
     {:else}
       <p class="text-gray-500">No upcoming events.</p>
     {/if}
+  </div>
+</div>
+
+<!-- Mid Syllabus/Suggestions Section -->
+<div
+  class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-full mt-4"
+>
+  <h2 class="text-xl font-bold mb-4">Mid Syllabus/Suggestions</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto">
+      <thead>
+        <tr>
+          <th class="px-4 py-2 text-left" style="width: 5%;">Date</th>
+          <th class="px-4 py-2 text-left" style="width: 10%;">Subject</th>
+          <th class="px-4 py-2 text-left" style="width: 85%;">Syllabus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Information System Design -->
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2" rowspan="4">11th</td>
+          <td class="px-4 py-2" rowspan="4">
+            <i class="fas fa-network-wired text-tea_green-500 text-xl mr-2"></i>
+            ISD
+          </td>
+          <td class="px-4 py-2">mod 1: chap 1: Information And Management</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >mod 2: chap 3: Information Systems Analysis Overview n</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">mod 3: chap 4: Information Gathering</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">mod 4: chap 6: Feasibility Analysis</td>
+        </tr>
+
+        <!-- Artificial Intelligence -->
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2" rowspan="5">12th</td>
+          <td class="px-4 py-2" rowspan="5">
+            <i class="fas fa-robot text-tea_green-500 text-xl mr-2"></i> AI
+          </td>
+          <td class="px-4 py-2">AI Introduction (definition and what not)</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">Game theory</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">Logics</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">Planning</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">NLP (IF-IDF **)</td>
+        </tr>
+
+        <!-- Statistics and Probability -->
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2" rowspan="5">13th</td>
+          <td class="px-4 py-2" rowspan="5">
+            <i class="fas fa-microchip text-tea_green-500 text-xl mr-2"></i> SAP
+          </td>
+          <td class="px-4 py-2">Mean, Median, Mode, Quartile</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">Standard Deviation, Mean Deviation, Variance</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">Moments, Skewness, Kurtosis</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >Example : 25.7, 25.9, 25.11 ; Problem : 25.3
+          </td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >Definition : SD, MD, V, Mean, Median, Mode, Quartile</td
+          >
+        </tr>
+
+        <!-- Computer Organization and Architecture -->
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2" rowspan="5">14th</td>
+          <td class="px-4 py-2" rowspan="5">
+            <i class="fas fa-microchip text-tea_green-500 text-xl mr-2"></i> COA
+          </td>
+        </tr>
+        <tr class="border-b border-gray-200"
+          ><td class="px-4 py-2"
+            >Basic Computer Organization & Design: Instruction Codes,
+            Direct/Indirect Address</td
+          ></tr
+        >
+        <tr class="border-b border-gray-200"
+          ><td class="px-4 py-2"
+            >Computer Registers and Bus systems, Computer Instruction</td
+          ></tr
+        >
+        <tr class="border-b border-gray-200"
+          ><td class="px-4 py-2"
+            >Timing and Control, Instruction Cycle, Interrupts (Book: Morris
+            Mano)</td
+          ></tr
+        >
+        <tr class="border-b border-gray-200"
+          ><td class="px-4 py-2"
+            >Enhancing Performance with Pipelining: An overview of Pipelining, A
+            Pipelined Datapath</td
+          ></tr
+        >
+
+        <!-- Operating Systems -->
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2" rowspan="19">15th</td>
+          <td class="px-4 py-2" rowspan="29">
+            <i class="fas fa-microchip text-tea_green-500 text-xl mr-2"></i> OS</td
+          >
+          <td class="px-4 py-2">CH1 : OP basics + structure + data pass</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH1 : Multi-threaded processor system</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH1 : Cluster computing system</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH1 : Single, multi, and clustered systems (Definition &
+            Comparison)</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH1 : Computational Environments ( Mobile , Cloud , Edge ... all
+            the different types)</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH1 : Open source OS</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH2 : OS services and interfaces</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH2 : System call and types</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH2 : OS structure ( layered, micro, modular, hybrid ... detailed
+            explanation with diagrams)</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH3 : Processes</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH3 : Precess states , blocks with diagrams</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH3 : Context switching</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH3 : Process creation and termination</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH3 : Inter-process communication **</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH4 : Thread (models) definition, benefits, challenges
+          </td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH4 : Multi threaded models (3) detailed explanation</td
+          >
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH6 : Scheduling definition and types</td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2">CH6 : Scheduler, dispatcher </td>
+        </tr>
+        <tr class="border-b border-gray-200">
+          <td class="px-4 py-2"
+            >CH6 : First come first serve & shortest job first algorithms **</td
+          >
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
