@@ -106,5 +106,31 @@
     "time":"02:30 PM",
     "name":"MAD Performance 2",
     "info":"Firebase data input/change/listing with basic UI "
+  },
+  {
+    "date":"2025-01-11",
+    "time":"01:00 PM",
+    "name":"MID: ISD",
+    "info":"CSE3211 613"
+  },{
+    "date":"2025-01-12",
+    "time":"01:00 PM",
+    "name":"MID: AI",
+    "info":"CSE3317 613"
+  },{
+    "date":"2025-01-13",
+    "time":"01:00 PM",
+    "name":"MID: SP",
+    "info":"STA2107 613"
+  },{
+    "date":"2025-01-14",
+    "time":"01:00 PM",
+    "name":"MID: COA",
+    "info":"CSE3737 613"
+  },{
+    "date":"2025-01-15",
+    "time":"01:00 PM",
+    "name":"MID: OS",
+    "info":"CSE3733 613"
   }
 ]
