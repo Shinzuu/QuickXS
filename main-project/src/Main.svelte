@@ -268,7 +268,7 @@
           <td class="px-4 py-2">mod 2: chap 3: Information Systems Analysis Overview (Software Development Life Cycle)</td>
         </tr>
         <tr class="border-b border-gray-200">
-          <td class="px-4 py-2">mod 3: chap 4: Information Gathering (System Requirement Specification)</td>
+          <td class="px-4 py-2">mod 3: chap 4: Information Gathering & Chap 5: System Requirement Specification</td>
         </tr>
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2">mod 4: chap 6: Feasibility Analysis</td>
