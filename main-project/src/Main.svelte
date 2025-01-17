@@ -240,10 +240,9 @@
   </div>
 </div>
 
-<!-- Mid Syllabus/Suggestions Section -->
-<div
-  class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-full mt-4"
->
+<!-- Mid Syllabus/Suggestions Section -->   
+<!-- 
+  <div class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-full mt-4">
   <h2 class="text-xl font-bold mb-4">Mid Syllabus/Suggestions</h2>
   <div class="overflow-x-auto">
     <table class="min-w-full table-auto">
@@ -255,7 +254,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Information System Design -->
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2" rowspan="4">11th</td>
           <td class="px-4 py-2" rowspan="4">
@@ -274,7 +272,6 @@
           <td class="px-4 py-2">mod 4: chap 6: Feasibility Analysis</td>
         </tr>
 
-        <!-- Artificial Intelligence -->
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2" rowspan="5">12th</td>
           <td class="px-4 py-2" rowspan="5">
@@ -295,7 +292,6 @@
           <td class="px-4 py-2">NLP (IF-IDF **)</td>
         </tr>
 
-        <!-- Statistics and Probability -->
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2" rowspan="5">13th</td>
           <td class="px-4 py-2" rowspan="5">
@@ -321,7 +317,6 @@
           >
         </tr>
 
-        <!-- Computer Organization and Architecture -->
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2" rowspan="5">14th</td>
           <td class="px-4 py-2" rowspan="5">
@@ -352,7 +347,6 @@
           ></tr
         >
 
-        <!-- Operating Systems -->
         <tr class="border-b border-gray-200">
           <td class="px-4 py-2" rowspan="19">15th</td>
           <td class="px-4 py-2" rowspan="29">
@@ -435,7 +429,7 @@
     </table>
   </div>
 </div>
-
+-->
 <style>
   .text-tea_green-500 {
     color: #3a9d88;
