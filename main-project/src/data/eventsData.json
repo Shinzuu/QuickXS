@@ -132,5 +132,11 @@
     "time":"01:00 PM",
     "name":"MID: OS",
     "info":"CSE3733 613"
+  },
+  {
+    "date":"2025-02-02",
+    "time":"08:30 AM",
+    "name":"OSL Performance 2",
+    "info":"Basic Shell Scripting"
   }
 ]
