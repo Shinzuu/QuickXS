@@ -144,5 +144,35 @@
     "time":"09:45 AM",
     "name":"ISD CT 2",
     "info":"Mod 5 & 6; DFD , Decision table & structure."
+  },
+  {
+    "date":"2025-04-07",
+    "time":"02:00 PM",
+    "name":"Final: ISD",
+    "info":"CSE3211"
+  },
+  {
+    "date":"2025-04-12",
+    "time":"02:00 PM",
+    "name":"Final: AI",
+    "info":"CSE3317"
+  },
+  {
+    "date":"2025-04-19",
+    "time":"02:00 PM",
+    "name":"Final: OS",
+    "info":"CSE3733"
+  },
+  {
+    "date":"2025-04-24",
+    "time":"02:00 PM",
+    "name":"Final: COA",
+    "info":"CSE3737"
+  },
+  {
+    "date":"2025-04-28",
+    "time":"02:00 PM",
+    "name":"Final: S&P",
+    "info":"STA2107"
   }
 ]
