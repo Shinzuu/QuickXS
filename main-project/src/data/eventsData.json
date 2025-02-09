@@ -174,5 +174,34 @@
     "time":"02:00 PM",
     "name":"Final: S&P",
     "info":"STA2107"
+  },
+  {
+    "date":"2025-02-25",
+    "time":"11:59 PM",
+    "name":"OS Assignment",
+    "info":"Complex Engineering Problem"
+  },
+  {
+    "date":"2025-02-25",
+    "time":"11:59 PM",
+    "name":"OS Assignment",
+    "info":"Assignment instead of (CT2 and CT3)"
+  },
+  {
+    "date":"2025-02-28",
+    "time":"11:59 PM",
+    "name":"OS Assignment",
+    "info":"Lab Report"
+  },
+  {
+    "date":"2025-02-12",
+    "time":"11:59 PM",
+    "name":"AI CT 3",
+    "info":"Rule-based Expert System, Uncertainty, Bayes Rule. Probabilistic Reasoning over time, Hidden Markov Models, Naïve Bayes Classifier, Bayesian Network."
+  },{
+    "date":"2025-02-16",
+    "time":"01:30 PM",
+    "name":"COA CT 2 (Date Uncertain)",
+    "info":"Central Processing Unit"
   }
 ]
