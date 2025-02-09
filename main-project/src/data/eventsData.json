@@ -203,5 +203,11 @@
     "time":"01:30 PM",
     "name":"COA CT 2 (Date Uncertain)",
     "info":"Central Processing Unit"
+  },
+  {
+    "date":"2025-03-11",
+    "time":"11:00 AM",
+    "name":"MAD Presentation",
+    "info":"Presentation on Project"
   }
 ]
