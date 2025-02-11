@@ -177,7 +177,7 @@
   },
   {
     "date":"2025-02-25",
-    "time":"11:59 PM",
+    "time":"11:58 PM",
     "name":"OS Assignment",
     "info":"Complex Engineering Problem"
   },
@@ -197,7 +197,7 @@
     "date":"2025-02-12",
     "time":"11:59 PM",
     "name":"AI CT 3",
-    "info":"Rule-based Expert System, Uncertainty, Bayes Rule. Probabilistic Reasoning over time, Hidden Markov Models, Naïve Bayes Classifier, Bayesian Network."
+    "info":" rule based expert system, uncertainty, hidden markov model."
   },{
     "date":"2025-02-16",
     "time":"01:30 PM",
