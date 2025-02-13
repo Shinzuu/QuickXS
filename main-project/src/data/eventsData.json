@@ -209,5 +209,10 @@
     "time":"11:00 AM",
     "name":"MAD Presentation",
     "info":"Presentation on Project"
+  },{
+    "date":"2025-02-19",
+    "time":"02:30 PM",
+    "name":"SAP CT2",
+    "info":"Condition probability+ bayes theorem + Probability"
   }
 ]
