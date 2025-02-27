@@ -235,5 +235,11 @@
     "time":"02:30 PM",
     "name":"AI ASSIGNMENT",
     "info":"Complex Engineering Problems (Handwritten)"
+  },
+  {
+    "date":"2025-03-07",
+    "time":"10:00 AM",
+    "name":"OS Lab Final",
+    "info":"shell script program, Basic linux command, scheduling algorithm"
   }
 ]
