@@ -231,8 +231,8 @@
     "info":"Complex Engineering Problems (Handwritten)"
   },
   {
-    "date":"2025-03-05",
-    "time":"02:30 PM",
+    "date":"2025-03-12",
+    "time":"10:30 AM",
     "name":"AI ASSIGNMENT",
     "info":"Complex Engineering Problems (Handwritten)"
   },
@@ -241,5 +241,10 @@
     "time":"10:00 AM",
     "name":"OS Lab Final",
     "info":"shell script program, Basic linux command, scheduling algorithm"
+  },{
+    "date":"2025-03-04",
+    "time":"11:00 AM",
+    "name":"MAD Lab performance 3",
+    "info":"API implementation"
   }
 ]
