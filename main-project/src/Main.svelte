@@ -171,7 +171,7 @@
 <h1 class="text-2xl font-bold mb-4 text-tea_green-300">Upcoming Sections</h1>
 
 <div class="flex flex-col sm:flex-row sm:space-x-4">
-  <!-- <div
+  <div
     class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-1/2 mb-4 sm:mb-0"
   >
     <h2 class="text-xl font-bold mb-4">Classes for {dayToDisplay}</h2>
@@ -210,11 +210,11 @@
     {:else}
       <p class="text-gray-500">No classes scheduled for {dayToDisplay}.</p>
     {/if}
-  </div> -->
+  </div>
 
-  <!-- // final notes link -->
+  
   <!-- Exam Notes Section -->
-  <div
+  <!-- <div
     class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-1/2 mb-4 sm:mb-0"
   >
     <h2 class="text-xl font-bold mb-4">Exam Notes</h2>
@@ -250,7 +250,7 @@
         >
       </li>
     </ul>
-  </div>
+  </div> -->
 
   <div
     class="bg-white shadow-lg p-4 rounded-lg border border-tea_green-300 w-full sm:w-1/2"
