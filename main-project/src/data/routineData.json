@@ -1,43 +1,42 @@
 {
-    "schedule": [
-      {
-        "day": "Saturday",
-        "classes": [
-          { "time": "11:00", "subject": "COA", "teacher": "TDM", "classroom": "611", "duration": 85 },
-          { "time": "12:15", "subject": "ISD", "teacher": "DD", "classroom": "611", "duration": 85 }
-        ]
-      },
-      {
-        "day": "Sunday",
-        "classes": [
-          { "time": "08:30", "subject": "OSL", "teacher": "SRM", "classroom": "606", "duration": 85 },
-          { "time": "09:45", "subject": "ISD", "teacher": "DD", "classroom": "510", "duration": 85 },
-          { "time": "11:00", "subject": "COA", "teacher": "TDM", "classroom": "510", "duration": 85 },
-          { "time": "12:15", "subject": "AI", "teacher": "AD", "classroom": "510", "duration": 85 }
-        ]
-      },
-      {
-        "day": "Monday",
-        "classes": [
-          { "time": "02:30", "subject": "OS", "teacher": "SRM", "classroom": "510", "duration": 85 },
-          { "time": "03:45", "subject": "SAP", "teacher": "GH", "classroom": "611", "duration": 85 }
-        ]
-      },
-      {
-        "day": "Tuesday",
-        "classes": [
-          { "time": "11:00", "subject": "MAD", "teacher": "AM", "classroom": "904", "duration": 150 },
-          { "time": "02:30", "subject": "AIL", "teacher": "AD", "classroom": "601", "duration": 150 }
-        ]
-      },
-      {
-        "day": "Wednesday",
-        "classes": [
-          { "time": "11:00", "subject": "OS", "teacher": "SRM", "classroom": "510", "duration": 85 },
-          { "time": "12:15", "subject": "AI", "teacher": "AD", "classroom": "409", "duration": 85 },
-          { "time": "02:30", "subject": "SAP", "teacher": "GH", "classroom": "510", "duration": 85 }
-        ]
-      }
-    ]
-  }
-  
+  "schedule": [
+    {
+      "day": "Saturday",
+      "classes": [
+        { "time": "", "subject": "DC",  "teacher": "FK",   "classroom": "613", "duration": 0 },
+        { "time": "", "subject": "SE",  "teacher": "EAS",  "classroom": "404", "duration": 0 },
+        { "time": "", "subject": "PM",  "teacher": "RI",   "classroom": "404", "duration": 0 },
+        { "time": "", "subject": "CCS", "teacher": "SAF",  "classroom": "408", "duration": 0 }
+      ]
+    },
+    {
+      "day": "Sunday",
+      "classes": [
+        { "time": "", "subject": "CN",  "teacher": "SMAI", "classroom": "610", "duration": 0 },
+        { "time": "", "subject": "SE",  "teacher": "EAS",  "classroom": "610", "duration": 0 }
+      ]
+    },
+    {
+      "day": "Monday",
+      "classes": [
+        { "time": "", "subject": "SEL", "teacher": "EAS",  "classroom": "604", "duration": 0 },
+        { "time": "", "subject": "SD",  "teacher": "DD",   "classroom": "609", "duration": 0 }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "classes": [
+        { "time": "", "subject": "DC",  "teacher": "FK",   "classroom": "613", "duration": 0 },
+        { "time": "", "subject": "CNL", "teacher": "SMAI", "classroom": "606", "duration": 0 }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "classes": [
+        { "time": "", "subject": "CCS", "teacher": "SAF",  "classroom": "408", "duration": 0 },
+        { "time": "", "subject": "CN",  "teacher": "SMAI", "classroom": "610", "duration": 0 },
+        { "time": "", "subject": "SD",  "teacher": "DD",   "classroom": "604", "duration": 0 }
+      ]
+    }
+  ]
+}
