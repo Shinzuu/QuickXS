@@ -1,25 +1,30 @@
 <script>
-  // TODO: Import your next semester's routine and events JSON
   import routineData from "./data/routineData.json";
   import eventsData from "./data/eventsData.json";
   import { onMount } from "svelte";
 
-  // Placeholder days of week
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-  // TODO: Populate with next semester subjects
+  // Updated subject names for your current semester
   const subjectFullNames = {
-    // e.g. CS101: "Course Title"
+    "CSE 3000": "Software Development Project",
+    "CSE 3233": "Software Engineering",
+    "CSE 3234": "Software Engineering Laboratory",
+    "CSE 3567": "Computer Networks",
+    "CSE 3568": "Computer Networks Laboratory",
+    "CSE 3637": "Computer and Cyber Security",
+    "EEE 4427": "Data Communication",
+    "MGT 3301": "Project Management and Entrepreneurship"
   };
 
-  // TODO: Populate with next semester teachers
+  // (Optional) Add teacher full names here if you have them
   const teacherFullNames = {
-    // e.g. JD: "John Doe"
+    // Example: "FK": "Full Name", "SMAI": "Full Name", etc.
   };
 
-  // TODO: Update icons if needed
+  // (Optional) Add subject icons here if you like
   const subjectIcons = {
-    // e.g. CS101: "fas fa-book"
+    // Example: "CSE 3000": "fas fa-project-diagram"
   };
 
   // Get today's day index (Monday = 0)
@@ -77,6 +82,7 @@
     return () => clearInterval(id);
   });
 </script>
+
 
 <h1 class="text-2xl font-bold mb-4 text-tea_green-300">Upcoming Sections</h1>
 <div class="flex flex-col sm:flex-row sm:space-x-4">
