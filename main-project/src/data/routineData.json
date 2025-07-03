@@ -3,10 +3,10 @@
     {
       "day": "Saturday",
       "classes": [
+        { "time": "08:30", "subject": "CCS", "teacher": "SAF",  "classroom": "408", "duration": 75 },
         { "time": "09:45", "subject": "DC",  "teacher": "FK",   "classroom": "613", "duration": 75 },
         { "time": "11:00", "subject": "SE",  "teacher": "EAS",  "classroom": "404", "duration": 75 },
-        { "time": "02:30", "subject": "PM",  "teacher": "RI",   "classroom": "404", "duration": 75 },
-        { "time": "03:45", "subject": "CCS", "teacher": "SAF",  "classroom": "408", "duration": 75 }
+        { "time": "02:30", "subject": "PM",  "teacher": "RI",   "classroom": "404", "duration": 75 }
       ]
     },
     {
